@@ -1,0 +1,15 @@
+.navbar-light .navbar-brand {
+    color: white;
+    font-size: 30px;
+}
+.bg-light {
+    background-color: black!important;
+}
+.accordion {
+    margin: 200px 150px 100px 200px;
+    
+}
+.card-header {
+    background-color: white;
+}
+
