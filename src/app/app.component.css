@@ -1,85 +1,50 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #0277bd;
-    min-height: 13vh;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
-  }
+body{
+  font-family: sans-serif;
+  font-weight: 600;
   
-  h4 a{
-    color: #FFF !important;
-    text-decoration: none !important
-    }
-  .logo {
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 5px;
-    font-size: 30px;
-  }
-  
-  .nav-links {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 15px;
-    width: 35%;
-  }
-  .nav-links li {
-    list-style: none;
-  }
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
-  .nav-links a:hover {
-    color: #01596d;
-  }
-  .contact {
-    padding: 4%;
-    height: 400px;
-  }
-  .col-md-3 {
-    background: #ff9b00;
-    padding: 4%;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-  }
-  .contact-info {
-    margin-top: 10%;
-  }
-  .contact-info img {
-    margin-bottom: 15%;
-  }
-  .contact-info h2 {
-    margin-bottom: 10%;
-  }
-  .col-md-9 {
-    background: #fff;
-    padding: 3%;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-  }
-  .contact-form label {
-    font-weight: 600;
-  }
-  .contact-form button {
-    background: #25274d;
-    color: #fff;
-    font-weight: 600;
-    width: 25%;
-  }
-  .contact-form button:focus {
-    box-shadow: none;
-  }
-  #btnn {
-    background-color: #0277bd;
-  }
+}
+.navbar-light .navbar-brand {
+  color: white;
+  font-size: 25px;
+  margin-left: 19px;
+
+}
+.navbar{
+  background-color:black;
+  height: 110px;
+}
+img{
+  width: 65px;
+  height: 50px;
+}
+a {
+ background-color: transparent;
+ text-decoration: none;
+ color: white;
+}
+li{
+  color: white;
+  list-style-type: none;
+}
+.actived-link {
+  color: green
+}
+nav ul {
+  justify-content: center;
+}
+
+
+
+/*footer*/
+footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  position: absolute;
+  height: 220px;
+  bottom: 0;
+  width: 100%;
+}
+
+
