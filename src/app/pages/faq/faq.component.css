@@ -6,7 +6,9 @@
     background-color: black!important;
 }
 .accordion {
-    margin: 200px 150px 100px 200px;
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-right: 150px;
     
 }
 .card-header {
