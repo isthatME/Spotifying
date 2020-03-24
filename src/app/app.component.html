@@ -8,10 +8,9 @@
         <a routerLink="/faq" routerLinkActive="actived-link">Ajuda
         </a>
       </li>
-      
     </ul>
   </nav>
-  <a routerLink="/faq">aa</a>
+  <img src="listening.jpg" alt="logo-listening">
   <footer>
     <a class="footer-brand" href="">
       <img src="../assets/logo.jpg" alt="logo-spotify">
@@ -22,6 +21,7 @@
       <li>About</li>
       <li>Contact us</li>
     </ul>
-    <div id="data-hora"></div>
+    <div id="date"> {{ myDate | date}} </div>    
   </footer>
+  <script src="../index.js"></script>
 <router-outlet></router-outlet>
