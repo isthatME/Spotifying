@@ -1,22 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+
+import { AppRoutingModule,routingComponents } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { FooterComponent } from './fixedComponents/footer/footer.component';
-import { HeaderComponent } from './fixedComponents/header/header.component';
-import { HomeComponent } from './pages/home/home.component';
-import { FaqComponent } from './pages/faq/faq.component';
-
-
-
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { FaqComponent } from './faq/faq.component';
+import { InfoComponent } from './info/info.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     FooterComponent,
-    HeaderComponent,
-    HomeComponent,
-    FaqComponent
+    routingComponents,
+    FaqComponent,
+    InfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,4 +27,4 @@ import { FaqComponent } from './pages/faq/faq.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

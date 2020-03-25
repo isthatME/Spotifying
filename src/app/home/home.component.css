@@ -1,0 +1,35 @@
+.home-content {
+    width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    text-align: left;
+    padding-bottom: 200px;
+}
+.text-header{
+    font-size: 122px;
+    color: black;
+    font-weight: bold;
+    line-height: 80%;
+    letter-spacing: -5px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.subtext-header{
+    width: 65%;
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 30px;
+}
+.description{
+    width: 65%;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 40px;
+}
+h1{
+    font-weight: bold;
+}
+video {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2)
+}
