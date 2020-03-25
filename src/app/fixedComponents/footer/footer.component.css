@@ -7,26 +7,23 @@ footer{
     height: 150px;
     bottom: 0;
     width: 100%;
-  }
-  a {
-    background-color: transparent;
-    text-decoration: none;
-    color: white;
-   }
+}
   img{
     width: 65px;
     height: 50px;
-  } 
-  li{
-    color: white;
-    list-style-type: none;
-  } 
+  }  
   #date {
-    margin-left: 800px;
+    margin-left: 960px;
     margin-bottom: 1px;
     color: white;
   }
   a{
     color: white;
+    text-decoration: none;
   }
+  li{
+    color: white;
+    list-style-type: none;
+  }
+
   
