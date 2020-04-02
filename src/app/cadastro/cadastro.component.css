@@ -1,0 +1,86 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.form {
+    margin-left: 400px;
+    margin-top: 60px;
+    height: auto;
+    padding-bottom: 10px;
+    width: 350px;
+    border: 1px solid rgb(195, 195, 195);
+    box-shadow: black;
+}
+
+.logo-spotify img {
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 50px;
+    margin: 20px 20px 20px 75px;
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.form-dados input {
+    display: block;
+    margin: 10px;
+    width: 320px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid rgb(195, 195, 195);
+
+}
+#dia-data {
+    display: inline;
+    width: 50px;
+}
+select{
+    display: inline;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid rgb(195, 195, 195);
+    color: rgb(195, 195, 195);
+}
+#ano-data {
+    display: inline;
+    width: 50px;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(195, 195, 195);
+    font-weight: bold;
+}
+
+hr {
+    margin: 10px;
+    color: rgb(195, 195, 195);
+}
+.sexo-check input{
+    display: inline-block;
+    width: 10px;
+
+}
+label{
+    font-weight: bold;
+    color: rgb(195, 195, 195);
+    margin: 0px 2px 5px 0px;
+}
+button{
+    padding: 13px;
+    color: white;
+    background-color: #1DB954;
+    border-radius: 500px;
+    width: 200px;
+}
+.button-sub{
+    display: flex;
+    justify-content: center;
+}

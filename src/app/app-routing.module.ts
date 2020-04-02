@@ -1,3 +1,4 @@
+import { CadastroComponent } from './cadastro/cadastro.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
@@ -9,6 +10,7 @@ import { InfoComponent } from './info/info.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: 'cadastro', pathMatch: 'full', component: CadastroComponent },
   { path: 'info', pathMatch: 'full', component: InfoComponent },
   { path: 'faq', pathMatch: 'full', component: FaqComponent }
 ];
