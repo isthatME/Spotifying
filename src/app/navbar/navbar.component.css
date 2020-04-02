@@ -3,8 +3,6 @@ nav{
   background-color: black;
   width: auto;
   justify-content: space-around;
-  font-size: 18px;
-  letter-spacing: 1px;
   box-shadow: rgb(80, 80, 80,);
 }
 .navbar-container{
