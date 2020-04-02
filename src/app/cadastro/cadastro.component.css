@@ -5,8 +5,9 @@ body {
 }
 
 .form {
-    margin-left: 400px;
-    margin-top: 60px;
+    display: abolute;    
+    margin-left: 450px;
+    margin-top: 50px;
     height: auto;
     padding-bottom: 10px;
     width: 350px;
@@ -32,26 +33,26 @@ body {
     display: block;
     margin: 10px;
     width: 320px;
-    height: 30px;
+    height: 40px;
     padding: 5px;
     border: 1px solid rgb(195, 195, 195);
 
 }
 #dia-data {
-    display: inline;
-    width: 50px;
+    display: inline-block;
+    width: 60px;
 }
 select{
-    display: inline;
+    display: inline-block;
     width: 150px;
-    height: 30px;
+    height: 40px;
     padding: 5px;
     border: 1px solid rgb(195, 195, 195);
     color: rgb(195, 195, 195);
 }
 #ano-data {
-    display: inline;
-    width: 50px;
+    display: inline-block;
+    width: 90px;
 }
 
 ::-webkit-input-placeholder {
