@@ -44,7 +44,7 @@ body {
 select{
     display: inline;
     width: 150px;
-    height: 40px;
+    height: 30px;
     padding: 5px;
     border: 1px solid rgb(195, 195, 195);
     color: rgb(195, 195, 195);
@@ -61,7 +61,7 @@ select{
 
 hr {
     margin: 10px;
-    color: rgb(195, 195, 195);
+    color: rgb(133, 133, 133);
 }
 .sexo-check input{
     display: inline-block;
