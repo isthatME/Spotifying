@@ -1,48 +1,69 @@
 <app-navbar></app-navbar>
-<div class="form">
-    <div class="logo-spotify">
-        <img src="../assets/cadastroLogo.png" alt="logo-spotify">       
-    </div>
-    <hr>
-    <div class="form-inner-content">
-        <div class="form-title">
-            Inscreva-se com seu endereço de e-mail
-        </div>
-    </div>
-    <div class="form-dados">
-        <input type="email" name="email" id="email" placeholder="E-mail">
-        <input type="email" name="email" id="email-confirmation" placeholder="E-mail-confirmation">
-        <input type="password" name="password" id="password" placeholder="Senha">
-        <input type="password" name="password" id="password" placeholder="Confirme sua senha">
-        <input type="text" name="nickname" id="nickname" placeholder="Como deveriamos chamar você?">
-        <input type="text" name="dia" id="dia-data" placeholder="Dia">
-        <select name="mes" id="mes" aria-placeholder="">
-            <option value="">Mês</option>
-            <option value="janeiro">Janeiro</option>
-            <option value="fevereiro">Fevereiro</option>
-            <option value="março">Março</option>
-            <option value="abril">Abril</option>
-            <option value="maio">Maio</option>
-            <option value="junho">Junho</option>
-            <option value="juulho">Julho</option>
-            <option value="agosto">Agosto</option>
-            <option value="setembro">Setembro</option>
-            <option value="outubro">Outubro</option>
-            <option value="novembro">Novembro</option>
-            <option value="dezembro">Dezembro</option>
-        </select>
-        <input type="text" name="ano" id="ano-data" placeholder="Ano">
-        <div class="sexo-check">
-            <input type="checkbox" name="sexo" id="masculino">
-                <label for="masculino">Masculino</label>
-            <input type="checkbox" name="sexo" id="feminino">
-                <label for="feminino">Feminino</label>
-            <input type="checkbox" name="sexo" id="nao-binario">
-                <label for="nao-binario">Não binario</label>
-        </div>
 
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form">
+        <div class="logo-spotify">
+            <img src="../assets/cadastroLogo.png" alt="logo-spotify">       
+        </div>
+        <hr>
+        <div class="form-inner-content">
+            <div class="form-title">
+                Inscreva-se com seu endereço de e-mail
+            </div>
+        </div>
+        <div class="form-dados">
+            <div *ngIf="!isEqual && showsError" class="alert alert-danger" role="alert">
+                Os emails não são iguais
+            </div>
+            <input type="email" name="email" id="email" placeholder="E-mail" ngModel required email>
+            <div *ngIf="f.controls.email.touched && !f.controls.email.valid" class="alert alert-danger" role="alert">
+                Campo obrigatório
+            </div>
+            <input type="email" name="email2" id="email-confirmation" placeholder="E-mail-confirmation" ngModel required email>
+            <div *ngIf="f.controls.email2.touched && !f.controls.email2.valid" class="alert alert-danger" role="alert">
+                Campo obrigatório
+            </div>
+            <input type="password" name="password" id="password" placeholder="Senha" ngModel required>
+            <div *ngIf="f.controls.password.touched && !f.controls.password.valid" class="alert alert-danger" role="alert">
+                Campo obrigatório
+            </div>
+            <input type="password" name="password2" id="password" placeholder="Confirme sua senha" required>
+            <div *ngIf="f.controls.password2.touched && !f.controls.password2.valid" class="alert alert-danger" role="alert">
+                Campo obrigatório
+            </div>
+            <input type="text" name="nickname" id="nickname" placeholder="Como deveriamos chamar você?" required>
+            <div *ngIf="f.controls.nickname.touched && !f.controls.nickname.valid" class="alert alert-danger" role="alert">
+                Campo obrigatório
+            </div>
+            <input type="text" name="dia" id="dia-data" placeholder="Dia">
+            <select name="mes" id="mes" aria-placeholder="">
+                <option value="">Mês</option>
+                <option value="janeiro">Janeiro</option>
+                <option value="fevereiro">Fevereiro</option>
+                <option value="março">Março</option>
+                <option value="abril">Abril</option>
+                <option value="maio">Maio</option>
+                <option value="junho">Junho</option>
+                <option value="juulho">Julho</option>
+                <option value="agosto">Agosto</option>
+                <option value="setembro">Setembro</option>
+                <option value="outubro">Outubro</option>
+                <option value="novembro">Novembro</option>
+                <option value="dezembro">Dezembro</option>
+            </select>
+            <input type="text" name="ano" id="ano-data" placeholder="Ano">
+            <div class="sexo-check">
+                <input type="checkbox" name="sexo" id="masculino">
+                    <label for="masculino">Masculino</label>
+                <input type="checkbox" name="sexo" id="feminino">
+                    <label for="feminino">Feminino</label>
+                <input type="checkbox" name="sexo" id="nao-binario">
+                    <label for="nao-binario">Não binario</label>
+            </div>
+    
+        </div>
+        <div class="button-sub">
+            <button type="submit" [disabled]="!f.valid">INSCREVER-SE</button>
+        </div>
     </div>
-    <div class="button-sub">
-        <button>INSCREVER-SE</button>
-    </div>
-</div>
+</form>

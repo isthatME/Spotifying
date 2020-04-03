@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainPlaylist{
+    margin: auto;
+    height: 900px;
+    width: 100%;
+    background: linear-gradient(180deg, #882D61, #572A72, #150A25);
+
+}
+footer{
+    margin-bottom: 0;
+}

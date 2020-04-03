@@ -8,6 +8,7 @@ body {
     display: abolute;    
     margin-left: 450px;
     margin-top: 50px;
+    margin-bottom: 10px;
     height: auto;
     padding-bottom: 10px;
     width: 350px;
@@ -62,7 +63,7 @@ select{
 
 hr {
     margin: 10px;
-    color: rgb(133, 133, 133);
+    color: black;
 }
 .sexo-check input{
     display: inline-block;
@@ -84,4 +85,10 @@ button{
 .button-sub{
     display: flex;
     justify-content: center;
+}
+
+/*  form css */
+
+.ng-invalid.ng-touched:not(form){
+    border: 1px solid red;
 }
