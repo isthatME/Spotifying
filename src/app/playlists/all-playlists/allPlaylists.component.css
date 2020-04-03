@@ -26,6 +26,10 @@ a img {
   width: 100%;
   box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
 }
+a img:hover {
+    transform: translate(0, -7px);
+    box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.2);
+}
 p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
@@ -38,15 +42,13 @@ p{
     margin: 0px 0px 0px 100px
 }
 .covid {
-   ontent: start;
     height: 100px;
     width: 100%;
     background-image: linear-gradient(rgb(128, 124, 190), rgb(189, 231, 149));
 }
 .covid p {
     display: flex;
-    justify-content: start;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     color: white;
     font-size: 20px;
