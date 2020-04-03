@@ -6,9 +6,48 @@
     margin: auto;
     height: 900px;
     width: 100%;
-    background: linear-gradient(180deg, #882D61, #572A72, #150A25);
+    background-image: linear-gradient(rgb(177, 112, 165), rgb(118, 163, 219));
 
 }
-footer{
-    margin-bottom: 0;
+.container{
+    display: grid;
+    float: right;
+    margin: 30px 90px 0px 0px;
+    height: 400px;
+    width: 400px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+
+
+}
+a img {
+  height: 100%;
+  width: 100%;
+  box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 600;
+}
+.larger-text{
+    font-size: 100px;
+}
+.text-container {
+    margin: 0px 0px 0px 100px
+}
+.covid {
+   ontent: start;
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(rgb(128, 124, 190), rgb(189, 231, 149));
+}
+.covid p {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    text-align: center;
+    color: white;
+    font-size: 20px;
 }
