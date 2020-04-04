@@ -27,7 +27,7 @@
             <div *ngIf="f.controls.password.touched && !f.controls.password.valid" class="alert alert-danger" role="alert">
                 Campo obrigatório
             </div>
-            <input type="password" name="password2" id="password" placeholder="Confirme sua senha" required>
+            <input type="password" name="password2" id="password" placeholder="Confirme sua senha" ngModel  required>
             <div *ngIf="f.controls.password2.touched && !f.controls.password2.valid" class="alert alert-danger" role="alert">
                 Campo obrigatório
             </div>
@@ -35,8 +35,8 @@
             <div *ngIf="f.controls.nickname.touched && !f.controls.nickname.valid" class="alert alert-danger" role="alert">
                 Campo obrigatório
             </div>
-            <input type="text" name="dia" id="dia-data" placeholder="Dia">
-            <select name="mes" id="mes" aria-placeholder="">
+            <input type="text" name="dia" id="dia-data" placeholder="Dia" ngModel>
+            <select name="mes" id="mes" aria-placeholder="" ngModel>
                 <option value="">Mês</option>
                 <option value="janeiro">Janeiro</option>
                 <option value="fevereiro">Fevereiro</option>
@@ -51,8 +51,8 @@
                 <option value="novembro">Novembro</option>
                 <option value="dezembro">Dezembro</option>
             </select>
-            <input type="text" name="ano" id="ano-data" placeholder="Ano">
-            <div class="sexo-check">
+            <input type="text" name="ano" id="ano-data" placeholder="Ano" ngModel>
+            <div class="sexo-check" ngModel>
                 <input type="checkbox" name="sexo" id="masculino">
                     <label for="masculino">Masculino</label>
                 <input type="checkbox" name="sexo" id="feminino">
@@ -62,8 +62,12 @@
             </div>
     
         </div>
+     
         <div class="button-sub">
             <button type="submit" [disabled]="!f.valid">INSCREVER-SE</button>
-        </div>
+        </div>    
+    </div>
+    <div *ngIf="showsError" class="alert alert-succes" role="alert"> 
+        Usuário cadastro com sucesso!
     </div>
 </form>
