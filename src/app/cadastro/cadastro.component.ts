@@ -12,7 +12,6 @@ export class CadastroComponent implements OnInit {
   onSubmit(form: NgForm) {
     if (form.value.email != form.value.email2) {
       this.isEqual = false
-      console.log(form.controls.email)
     } else {      
       form.reset()
       this.showsError = false

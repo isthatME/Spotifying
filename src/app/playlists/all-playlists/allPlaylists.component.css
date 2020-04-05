@@ -12,7 +12,7 @@
 .container{
     display: grid;
     float: right;
-    margin: 30px 90px 0px 0px;
+    margin: 70px 200px 0px 0px;
     height: 500px;
     width: 500px;
     grid-template-columns: 1fr 1fr;
@@ -32,12 +32,12 @@ a img:hover {
     box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.2);
 }
 p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
     color: white;
-    font-weight: 600;
+    font-weight: bold;
 }
 .larger-text{
-    font-size: 100px;
+    font-size: 80px;
 }
 .text-container {
     margin: 0px 0px 0px 100px

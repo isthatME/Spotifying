@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FaqComponent } from './faq/faq.component';
-import { InfoComponent } from './info/info.component';
 import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { Playlist1Component } from './playlists/playlist1/playlist1.component';
@@ -24,7 +23,6 @@ import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.co
     FooterComponent,
     routingComponents,
     FaqComponent,
-    InfoComponent,
     HomeComponent,
     CadastroComponent,
     Playlist1Component,
