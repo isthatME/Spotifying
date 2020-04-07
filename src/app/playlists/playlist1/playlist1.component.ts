@@ -10,12 +10,16 @@ import { PlaylistService } from './playlist.service'
 export class Playlist1Component implements OnInit {
   playlist: PlaylistService;
   songs: string[] = []
+  singerName: string = ''
+  albumName: string = ''
   constructor() { 
     this.playlist = new PlaylistService()
   }
 
   ngOnInit(): void {
     this.songs = this.playlist.getPlaylist()
+    this.singerName = this.playlist.getSingerNamer()
+    this.albumName = this.playlist.getAlbumsName()
   }
 
 }

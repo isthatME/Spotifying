@@ -1,7 +1,33 @@
-<div class="container">
-    dasd
-</div>
 <!-- <div *ngFor="let song  of songs">
     <li> {{ song }}</li>
 </div> -->
 
+<body>
+    <div class="containerr">
+        <div class="left-gadgets">
+            <div class="album-cover">
+                <img src="https://pbs.twimg.com/media/EPV873wWsAAbdj7.jpg" alt="" class="imgg">
+                <div class="description">
+                    <p class="larger-desc">
+                        {{ albumName }}
+                    </p>
+                </div>
+                <div class="button-sub">
+                    <button type="button">
+                        PLAY
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="song-list">
+            <ul *ngFor="let song of songs" class="songs-name">
+                <div class="play-img">
+                    <img src="assets/songg.png" alt="">
+                </div>
+                <li>{{ song }}</li>
+                <li class="singer-name">{{ singerName }}</li>
+            </ul>
+        </div>
+    </div>
+    <app-footer></app-footer>
