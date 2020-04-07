@@ -3,7 +3,10 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <div class="form">
         <div class="logo-spotify">
-            <img src="../assets/cadastroLogo.png" alt="logo-spotify">       
+            <img src="../assets/cadastroLogo.png" alt="logo-spotify">
+        </div>
+        <div *ngIf="!showsError" class="alert alert-success" role="alert">
+            Usuário cadastro com sucesso!
         </div>
         <hr>
         <div class="form-inner-content">
@@ -19,20 +22,24 @@
             <div *ngIf="f.controls.email.touched && !f.controls.email.valid" class="alert alert-danger" role="alert">
                 Campo obrigatório
             </div>
-            <input type="email" name="email2" id="email-confirmation" placeholder="E-mail-confirmation" ngModel required email>
+            <input type="email" name="email2" id="email-confirmation" placeholder="E-mail-confirmation" ngModel required
+                email>
             <div *ngIf="f.controls.email2.touched && !f.controls.email2.valid" class="alert alert-danger" role="alert">
                 Campo obrigatório
             </div>
             <input type="password" name="password" id="password" placeholder="Senha" ngModel required>
-            <div *ngIf="f.controls.password.touched && !f.controls.password.valid" class="alert alert-danger" role="alert">
+            <div *ngIf="f.controls.password.touched && !f.controls.password.valid" class="alert alert-danger"
+                role="alert">
                 Campo obrigatório
             </div>
-            <input type="password" name="password2" id="password" placeholder="Confirme sua senha" ngModel  required>
-            <div *ngIf="f.controls.password2.touched && !f.controls.password2.valid" class="alert alert-danger" role="alert">
+            <input type="password" name="password2" id="password" placeholder="Confirme sua senha" ngModel required>
+            <div *ngIf="f.controls.password2.touched && !f.controls.password2.valid" class="alert alert-danger"
+                role="alert">
                 Campo obrigatório
             </div>
             <input type="text" name="nickname" id="nickname" placeholder="Como deveriamos chamar você?" required>
-            <div *ngIf="f.controls.nickname.touched && !f.controls.nickname.valid" class="alert alert-danger" role="alert">
+            <div *ngIf="f.controls.nickname.touched && !f.controls.nickname.valid" class="alert alert-danger"
+                role="alert">
                 Campo obrigatório
             </div>
             <input type="text" name="dia" id="dia-data" placeholder="Dia" ngModel>
@@ -54,20 +61,22 @@
             <input type="text" name="ano" id="ano-data" placeholder="Ano" ngModel>
             <div class="sexo-check" ngModel>
                 <input type="checkbox" name="sexo" id="masculino">
-                    <label for="masculino">Masculino</label>
+                <label for="masculino">Masculino</label>
                 <input type="checkbox" name="sexo" id="feminino">
-                    <label for="feminino">Feminino</label>
+                <label for="feminino">Feminino</label>
                 <input type="checkbox" name="sexo" id="nao-binario">
-                    <label for="nao-binario">Não binario</label>
+                <label for="nao-binario">Não binario</label>
             </div>
-    
+
         </div>
-     
+
         <div class="button-sub">
             <button type="submit" [disabled]="!f.valid">INSCREVER-SE</button>
-        </div>    
+        </div>
+        <div *ngIf="showsError" class="alert alert-success" role="alert">
+            Usuário cadastro com sucesso!
+        </div>
     </div>
-    <div *ngIf="showsError" class="alert alert-succes" role="alert"> 
-        Usuário cadastro com sucesso!
-    </div>
+
+
 </form>

@@ -13,8 +13,8 @@ export class CadastroComponent implements OnInit {
     if (form.value.email != form.value.email2) {
       this.isEqual = false
     } else {      
-      form.reset()
       this.showsError = false
+      console.log(form)
     }
   }
 
