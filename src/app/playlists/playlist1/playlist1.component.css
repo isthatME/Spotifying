@@ -1,11 +1,10 @@
 body{
-    padding: 0;
-    margin: 0;
-}
-body{
     margin: 0;
     padding: 0;
     height: 1500px;
+}
+nav{
+    background-color: blue;
 }
 .imgg {
     width: 210px;
