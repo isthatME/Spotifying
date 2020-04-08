@@ -14,7 +14,7 @@ export class CadastroComponent implements OnInit {
       this.isEqual = false
     } else {      
       this.showsError = false
-      console.log(form)
+      form.reset()
     }
   }
 
