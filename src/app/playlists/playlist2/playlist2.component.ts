@@ -19,5 +19,4 @@ export class Playlist2Component implements OnInit {
     this.singerName = this.playlist.getSingerNamer()
     this.albumName = this.playlist.getAlbumsName()
   }
-
 }

@@ -14,7 +14,7 @@ nav{
 .containerr{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg,rgb(175, 32, 32),rgb(42, 40, 40),rgb(26, 25, 25),rgb(26, 25, 25),rgb(26, 25, 25));
+    background-image: linear-gradient(180deg,rgb(175, 32, 32),rgb(19, 14, 14),rgb(26, 25, 25),rgb(26, 25, 25),rgb(26, 25, 25));
 }
 .left-gadgets{
     float: left;
@@ -88,10 +88,9 @@ li {
 
 ::-webkit-scrollbar-track-piece  {
     background-color: #3b3b3b;
-    -webkit-border-radius: 6px;
+
 }
 
 ::-webkit-scrollbar-thumb:vertical {
     background-color: #666;
-    -webkit-border-radius: 6px;
 }
