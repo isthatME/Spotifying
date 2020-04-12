@@ -23,8 +23,13 @@
         <div class="song-list">
             <ul  *ngFor="let song of songs" class="songs-name">
                 <div class="play-img">
-                    <img src="assets/songg.png" alt="">
-                    <li>{{ song }}</li>
+                    <div class="inner-play-img">
+                        <img src="assets/songg.png" alt="">
+                        <li>{{ song }}</li>
+                    </div>
+                    <div class="inner-play-time">
+                        3:00
+                    </div>
                 </div>
                 <li class="singer-name">{{ singerName }}</li>
                 

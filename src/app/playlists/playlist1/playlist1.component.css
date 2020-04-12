@@ -68,12 +68,22 @@ button {
 li {
     list-style-type: none;
 }
+.play-img .inner-play-img{
+   
+    display: flex;
+}
+.play-img .inner-play-time{
+    margin-right: 8px;
+    font-size: 12px;
+}
 .play-img {
     display: flex;
+    justify-content: space-between;
 }
 .play-img img{
     width: 20px;
     height: 20px;
+    margin-right: 5px;
 }
 .singer-name {
     color: rgb(151, 151, 151);

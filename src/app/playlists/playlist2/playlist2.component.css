@@ -71,8 +71,17 @@ li {
 }
 .play-img {
     display: flex;
+    justify-content: space-between;
+}
+.play-img .inner-play-img{
+    display: flex;
+}
+.play-img .inner-play-time{
+    margin-right: 8px;
+    font-size: 12px;
 }
 .play-img img{
+    margin-right: 8px;
     width: 20px;
     height: 20px;
 }
