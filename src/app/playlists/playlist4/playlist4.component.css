@@ -66,6 +66,17 @@ button {
     width: 90vh;
     overflow-y: auto;
 }
+.bg-items {
+    padding: 5px;
+}
+.bg-items:hover {
+    background-color: rgb(101, 102, 102,0.3);
+    transition-duration: 0.2s;
+ 
+}
+.songs-name {
+    margin: 0;
+}
 li {
     list-style-type: none;
 }

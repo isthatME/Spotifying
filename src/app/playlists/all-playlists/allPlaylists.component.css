@@ -6,7 +6,7 @@
     margin: auto;
     height: 900px;
     width: 100%;
-    background-image: linear-gradient(rgb(177, 112, 165), rgb(118, 163, 219));
+    background-image: linear-gradient(rgb(182, 107, 168), rgb(118, 163, 219),rgb(12, 11, 11));
 
 }
 .container{
@@ -34,13 +34,14 @@ a img:hover {
 p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
     color: white;
-    font-weight: bold;
 }
 .larger-text{
     font-size: 80px;
+    font-weight: bolder;
+    letter-spacing: 0;
 }
 .text-container {
-    margin: 0px 0px 0px 100px
+    margin: 0px 0px 0px 100px;
 }
 .covid {
     height: 100px;

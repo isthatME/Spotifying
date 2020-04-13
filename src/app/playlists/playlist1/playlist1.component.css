@@ -64,6 +64,18 @@ button {
     height: 67.6vh;
     width: 90vh;
     overflow-y: auto;
+    
+}
+.bg-items {
+    padding: 5px;
+}
+.bg-items:hover {
+    background-color: rgb(101, 102, 102,0.3);
+    transition-duration: 0.2s;
+ 
+}
+.songs-name {
+    margin: 0;
 }
 li {
     list-style-type: none;
@@ -89,7 +101,6 @@ li {
     color: rgb(151, 151, 151);
     font-size: 12px;
 }
-
 /* scroll modifications */
 ::-webkit-scrollbar {
     width: 5px;
