@@ -9,7 +9,7 @@
                 <img src="https://pbs.twimg.com/media/EPV873wWsAAbdj7.jpg" alt="" class="imgg">
                 <div class="description">
                     <p class="larger-desc">
-                        
+                        {{ albumName }}
                     </p>
                 </div>
                 <div class="button-sub">
@@ -21,17 +21,19 @@
             </div>
         </div>
         <div class="song-list">
-            <ul *ngFor="let song of songs" class="songs-name">
+            <ul *ngFor="let song of songs; let i = index" class="songs-name">
                 <div class="play-img">
                     <div class="inner-play-img">
                         <img src="assets/songg.png" alt="">
                         <li>{{ song.name }}</li>
                     </div>
                     <div class="inner-play-time">
-                        3:00
+                        {{ song.duration }}
                     </div>
                 </div>
-                <li class="singer-name"></li>
+                <li class="singer-name">
+                    {{ song.singer }}
+                </li>
             </ul>
         </div>
     </div>

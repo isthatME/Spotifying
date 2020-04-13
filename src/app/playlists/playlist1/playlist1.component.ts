@@ -10,11 +10,15 @@ import { Playlist } from '../playlists';
 
 export class Playlist1Component implements OnInit {
   songs: any[];
+  albumName: string;
+  singerName: String;
   sng: any[];
   constructor(private pl:Playlist1Service) { }
 
   ngOnInit(){
     this.sng = this.pl.getPlaylist()
     this.songs = this.sng[0].music;
+    console.log(this.sng)
+    this.albumName = this.sng[0].name
   }
 }

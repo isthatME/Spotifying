@@ -3,7 +3,7 @@ import { Playlist } from './playlists';
 export const PLAYLIST: Playlist[] = [
     {
         id: '1',
-        name: 'change',
+        name: 'Changes',
         music : [
             {
                 name: 'E.T.A',
@@ -32,7 +32,7 @@ export const PLAYLIST: Playlist[] = [
             {
                 name: 'Second Emotion feat. Travis Scot',
                 singer: 'Justin Bieber',
-                duration: ''
+                duration: '3:38'
             },
             {
                 name: 'Changes',
