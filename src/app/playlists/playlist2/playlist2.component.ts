@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { PlaylistService } from './playlist2.service';
+import { Playlist2Service } from './playlist2.service';
 @Component({
   selector: 'app-playlist2',
   templateUrl: './playlist2.component.html',
   styleUrls: ['./playlist2.component.css']
 })
 export class Playlist2Component implements OnInit {
-  playlist: PlaylistService;
-  songs: string[] = []
-  singerName: string = ''
-  albumName: string = ''
-  constructor() { 
-    this.playlist = new PlaylistService()
-  }
+  songs: any[];
+  albumName: string;
+  singerName: String;
+  sng: any[];
+  constructor(private pl:Playlist2Service) { }
 
   ngOnInit(): void {
-    this.songs = this.playlist.getPlaylist()
-    this.singerName = this.playlist.getSingerNamer()
-    this.albumName = this.playlist.getAlbumsName()
+    this.sng = this.pl.getPlaylist()
+    this.songs = this.sng[1].music;
+    console.log(this.sng)
+    this.albumName = this.sng[1].name
   }
 }

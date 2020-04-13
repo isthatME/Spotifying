@@ -25,13 +25,13 @@
                 <div class="play-img">
                     <div class="inner-play-img">
                         <img src="assets/songg.png" alt="">
-                        <li>{{ song }}</li>
+                        <li>{{ song.name }}</li>
                     </div>
                     <div class="inner-play-time">
-                        3:00
+                       {{ song.duration }}
                     </div>
                 </div>
-                <li class="singer-name">{{ singerName }}</li>
+                <li class="singer-name">{{ song.singer }}</li>
                 
             </ul>
         </div>

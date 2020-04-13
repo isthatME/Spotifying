@@ -14,7 +14,7 @@ nav{
 .containerr{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg,rgb(175, 32, 32),rgb(19, 14, 14),rgb(26, 25, 25),rgb(26, 25, 25),rgb(26, 25, 25));
+    background-image: linear-gradient(180deg,rgb(175, 32, 32),rgb(26, 25, 25),rgb(26, 25, 25));
 }
 .left-gadgets{
     float: left;
