@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PlaylistService } from './playlist.service'
+import { Playlist1Service } from './playlist1.service'
+import { Playlist } from '../playlists';
 
 @Component({
   selector: 'app-playlist1',
@@ -8,17 +9,12 @@ import { PlaylistService } from './playlist.service'
 })
 
 export class Playlist1Component implements OnInit {
-  playlist: PlaylistService;
-  songs: string[] = []
-  singerName: string = ''
-  albumName: string = ''
-  constructor() { 
-    this.playlist = new PlaylistService()
-  }
+  songs: any[];
+  sng: any[];
+  constructor(private pl:Playlist1Service) { }
 
-  ngOnInit(): void {
-    this.songs = this.playlist.getPlaylist()
-    this.singerName = this.playlist.getSingerNamer()
-    this.albumName = this.playlist.getAlbumsName()
+  ngOnInit(){
+    this.sng = this.pl.getPlaylist()
+    this.songs = this.sng[0].music;
   }
 }
