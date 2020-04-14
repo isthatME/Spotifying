@@ -20,51 +20,11 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-
+  <script src="jquery-1.10.2.min.js"></script>
 </head>
 
 <body>
-  <script>
-    (function () {
-      'use strict';
-
-      var img = document.querySelector('img'),
-        div = document.getElementsByClassName('containerr'),
-        paletteReady = false;
-
-      img.addEventListener('load', function () {
-        if (!paletteReady)
-          getPalette();
-      });
-
-      if (!paletteReady)
-        getPalette();
-
-      function getPalette() {
-        paletteReady = true;
-
-        var vibrant = new Vibrant(img),
-          swatches = vibrant.swatches(),
-          listFragment = new DocumentFragment();
-
-        for (var swatch in swatches) {
-          if (swatches.hasOwnProperty(swatch) && swatches[swatch]) {
-            console.log(swatch, swatches[swatch].getHex());
-          }
-        }
-        var getcol = swatches['DarkVibrant'].getHex();
-        var getcol = swatches['DarkVibrant'].getHex();
-        if (swatches['DarkVibrant']) {
-          div.style.backgroundImage = '-webkit-linear-gradient('
-            + getcol + ', ' + getcol + ', ' + getcol + ')';
-        }
-      }
-      console.log(getcol)
-
-    }());
-  </script>
-  <app-root></app-root>
-
+    <app-root></app-root>
 </body>
 
 </html>

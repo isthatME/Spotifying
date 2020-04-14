@@ -19,7 +19,7 @@ body{
 }
 .left-gadgets{
     float: left;
-    margin: 100px 0px 0px 300px;
+    margin: 100px 0px 0px 150px;
 }
 button {
     padding: 10px;
@@ -58,13 +58,14 @@ button {
 
 .song-list {
     float: right;
-    margin: 100px 100px 0px 25px;
+    margin: 100px 50px 0px 25px;
     color: white;
-    font-family: Comic Sans MS;
+    font-family: sans-serif;
     font-weight: bold;
     height: 67.6vh;
-    width: 90vh;
+    width: 125vh;
     overflow-y: auto;
+    
 }
 .bg-items {
     padding: 5px;
@@ -99,6 +100,7 @@ li {
 .singer-name {
     color: rgb(151, 151, 151);
     font-size: 12px;
+    margin-left: 3.7vh;
 }
 ::-webkit-scrollbar {
     width: 5px;

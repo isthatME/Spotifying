@@ -1,3 +1,4 @@
+import { Music } from './../music';
 import { Injectable } from '@angular/core';
 import { Playlist } from '../playlists';
 import { PLAYLIST } from '../playlist1-mock';
@@ -7,10 +8,10 @@ import { PLAYLIST } from '../playlist1-mock';
 })
 export class Playlist1Service {
 
-  constructor() { 
+  constructor() {
 
   }
   getPlaylist(): Playlist[] {
-      return PLAYLIST;
-}
+    return PLAYLIST;
+  }
 }
