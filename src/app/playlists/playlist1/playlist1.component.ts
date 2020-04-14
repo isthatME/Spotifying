@@ -19,7 +19,6 @@ export class Playlist1Component implements OnInit {
   path: any[];
   albumName: string;
   sng: any[];
-  sng2: any[];
   constructor(private pl: Playlist1Service) { }
   ngOnInit() {
     this.sng = this.pl.getPlaylist()

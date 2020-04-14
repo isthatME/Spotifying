@@ -22,7 +22,7 @@
         </div>
         <div class="song-list">
             <ul *ngFor="let song of songs; let i = index" class="songs-name">
-                <li class="bg-items" (click)="start(path)">
+                <li class="bg-items" (dblclick)="start(path)">
                     <div class="play-img">
                         <div class="inner-play-img">
                             <img src="assets/songg.png" alt="">

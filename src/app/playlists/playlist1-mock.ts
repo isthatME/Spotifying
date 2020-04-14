@@ -15,13 +15,13 @@ export const PLAYLIST: Playlist[] = [
                 name: 'E.T.A',
                 singer: 'justin Bieber',
                 duration: '3:24',
-                path: './assets/musics/Come Around Me.mp3'
+                path: './assets/musics/E.T.A.mp3'
             },
             {
                 name: 'Confirmation',
                 singer: 'Justin bieber',
                 duration: '2:48',
-                path: './assets/musics/Come Around Me.mp3'
+                path: './assets/musics/Confirmation.mp3'
             },
             {
                 name: 'Forever feat. Post Malone',
