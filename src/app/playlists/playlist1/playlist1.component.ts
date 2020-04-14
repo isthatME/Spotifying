@@ -30,13 +30,13 @@ export class Playlist1Component implements OnInit {
   activeTrack: Track = null;
   player: Howl = null;
   isPlaying = false;
-
+  song: string  = ''
   start(path) {
     if(this.player){
       this.player.stop()
     }
     this.player = new Howl({
-      src: this.path,
+      src: [`../assets/musics/${path}.mp3`],
       onplay: () => {
         this.isPlaying = true
         this.activeTrack = path

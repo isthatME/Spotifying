@@ -6,7 +6,7 @@ export const PLAYLIST: Playlist[] = [
         name: 'Changes',
         music : [
             {
-                name: 'Come Around',
+                name: 'Come Around Me',
                 singer: 'justin Bieber',
                 duration: '4:24',
                 path: './assets/musics/Come Around Me.mp3'
