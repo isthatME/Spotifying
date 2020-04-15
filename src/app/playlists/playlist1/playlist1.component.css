@@ -20,7 +20,7 @@ nav{
     float: left;
     margin: 100px 0px 0px 150px;
 }
-button {
+.button-sub button {
     padding: 10px;
     color: white;
     width: 120px;
@@ -117,9 +117,25 @@ li {
 ::-webkit-scrollbar-thumb:vertical {
     background-color: #666;
 }
+/* todos os elementos do player */
 .playerbtns{
     display: flex;
     width: 100%;
-    background-color: black;
+    height: 17.2vh;
+    background-color: #282828;
     justify-content: center;
 }
+/* botões do player */
+
+.playerbtns button {
+    background-color:#282828;
+    border: none;
+}
+button {
+    outline-style: none;
+}
+
+
+/* barra de progresso */
+
+

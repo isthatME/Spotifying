@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Playlist1Service } from './playlist1.service';
-import { Howl } from 'howler';
-import { Music } from '../music';
 
 @Component({
   selector: 'app-playlist1',
@@ -23,7 +21,8 @@ export class Playlist1Component implements OnInit {
   }
   song = new Audio()
   currentSong = 0;
-  playSong() {
+  playSong(index: any) {
+    this.currentSong = index;
     this.song.src = this.path[this.currentSong]
     this.song.play()
   }
@@ -39,6 +38,13 @@ export class Playlist1Component implements OnInit {
     if(this.currentSong > this.path.length){
       this.currentSong = 0
     }
-    this.playSong()
+    this.playSong(this.currentSong)
+  }
+  prev(){
+    this.currentSong--
+    if(this.currentSong < 0){
+      this.currentSong = this.path.length
+    }
+    this.playSong(this.currentSong)
   }
 }
