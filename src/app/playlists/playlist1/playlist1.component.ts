@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Playlist1Service } from './playlist1.service';
 import { Howl } from 'howler';
-import { Playlist } from '../playlists';
-
-export interface Track {
-  name: string;
-  path: any;
-}
+import { Music } from '../music';
 
 @Component({
   selector: 'app-playlist1',
@@ -27,7 +22,7 @@ export class Playlist1Component implements OnInit {
     console.log(this.path)
     this.albumName = this.sng[0].name;
   }
-  activeTrack: Track = null;
+  activeTrack: Music = null;
   player: Howl = null;
   isPlaying = false;
   song: string  = ''

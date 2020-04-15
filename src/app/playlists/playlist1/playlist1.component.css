@@ -117,3 +117,9 @@ li {
 ::-webkit-scrollbar-thumb:vertical {
     background-color: #666;
 }
+.playerbtns{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+}
