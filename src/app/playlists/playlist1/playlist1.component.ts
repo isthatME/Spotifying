@@ -19,44 +19,26 @@ export class Playlist1Component implements OnInit {
     this.sng = this.pl.getPlaylist()
     this.songs = this.sng[0].music;
     this.path = this.songs.map(e => e.path)
-    console.log(this.path)
     this.albumName = this.sng[0].name;
   }
-  activeTrack: Music = null;
-  player: Howl = null;
-  isPlaying = false;
-  song: string  = ''
-  start(path) {
-    if(this.player){
-      this.player.stop()
+  song = new Audio()
+  currentSong = 0;
+  playSong() {
+    this.song.src = this.path[this.currentSong]
+    this.song.play()
+  }
+  playAndPause() {
+    if(this.song.paused){
+      this.song.play()
+    }else{
+      this.song.pause()
     }
-    this.player = new Howl({
-      src: [`../assets/musics/${path}.mp3`],
-      onplay: () => {
-        this.isPlaying = true
-        this.activeTrack = path
-      },
-      onend: () => {
-
-      }
-    })
-    this.player.play()
   }
-  togglePlayer(pause) {
-    this.isPlaying = !pause
-    if(pause) {
-      this.player.pause();
-    } else { 
-      this.player.play();
-     }
-  }
-  next() {
-
-  }
-  prev() {
-
-  }
-  seek() {
-
+  next(){
+    this.currentSong++
+    if(this.currentSong > this.path.length){
+      this.currentSong = 0
+    }
+    this.playSong()
   }
 }

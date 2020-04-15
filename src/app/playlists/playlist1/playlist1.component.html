@@ -13,7 +13,7 @@
                     </p>
                 </div>
                 <div class="button-sub">
-                    <button type="button" (click)="start(path[0])">
+                    <button type="button">
                         PLAY
                     </button>
                 </div>
@@ -22,7 +22,7 @@
         </div>
         <div class="song-list">
             <ul *ngFor="let song of songs; let i = index" class="songs-name">
-                <li class="bg-items" (dblclick)="start(song.name)">
+                <li class="bg-items" (click)="playSong()">
                     <div class="play-img">
                         <div class="inner-play-img">
                             <img src="assets/songg.png" alt="">
@@ -39,7 +39,7 @@
             </ul>
         </div>
         <div class="playerbtns">
-            <button class="play" (click)="togglePlayer(false)">Play</button>
-            <button class="Pause" (click)="togglePlayer(true)">Pause</button>
+            <button class="play" (click)="playAndPause()">Play</button>
+            <button class="Pause" (click)="next()">Next</button>
         </div>
     </div>
