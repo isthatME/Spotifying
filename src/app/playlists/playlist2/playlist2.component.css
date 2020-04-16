@@ -1,11 +1,10 @@
 body{
-    padding: 0;
-    margin: 0;
-}
-body{
     margin: 0;
     padding: 0;
     height: 9vh;
+}
+nav{
+    background-color: blue;
 }
 .imgg {
     width: 210px;
@@ -15,13 +14,13 @@ body{
 .containerr{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg,rgb(129, 127, 127),rgb(19, 14, 14),rgb(26, 25, 25),rgb(26, 25, 25),rgb(26, 25, 25));
+    background-image: linear-gradient(180deg,rgb(119, 119, 119),rgb(26, 25, 25),rgb(26, 25, 25),rgb(26, 25, 25),rgb(26, 25, 25));
 }
 .left-gadgets{
     float: left;
     margin: 100px 0px 0px 150px;
 }
-button {
+.button-sub button {
     padding: 10px;
     color: white;
     width: 120px;
@@ -65,7 +64,7 @@ button {
     height: 67.6vh;
     width: 125vh;
     overflow-y: auto;
-    
+    cursor: pointer;
 }
 .bg-items {
     padding: 5px;
@@ -75,33 +74,36 @@ button {
     transition-duration: 0.2s;
  
 }
+.songs-name {
+    margin: 0;
+}
 li {
     list-style-type: none;
 }
-.play-img {
-    display: flex;
-    justify-content: space-between;
-}
 .play-img .inner-play-img{
+   
     display: flex;
 }
 .play-img .inner-play-time{
     margin-right: 8px;
     font-size: 12px;
+    color: rgb(151, 151, 151)
+}
+.play-img {
+    display: flex;
+    justify-content: space-between;
 }
 .play-img img{
-    margin-right: 8px;
     width: 20px;
     height: 20px;
+    margin-right: 5px;
 }
 .singer-name {
     color: rgb(151, 151, 151);
     font-size: 12px;
     margin-left: 3.7vh;
 }
-.songs-name {
-    margin: 0;
-}
+/* scroll modifications */
 ::-webkit-scrollbar {
     width: 5px;
     height: 10px;
@@ -115,3 +117,25 @@ li {
 ::-webkit-scrollbar-thumb:vertical {
     background-color: #666;
 }
+/* todos os elementos do player */
+.playerbtns{
+    display: flex;
+    width: 100%;
+    height: 17.2vh;
+    background-color: #282828;
+    justify-content: center;
+}
+/* botões do player */
+
+.playerbtns button {
+    background-color:#282828;
+    border: none;
+}
+button {
+    outline-style: none;
+}
+
+
+/* barra de progresso */
+
+

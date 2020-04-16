@@ -1,12 +1,8 @@
-<!-- <div *ngFor="let song  of songs">
-    <li> {{ song }}</li>
-</div> -->
-<app-navbar></app-navbar>
 <body>
     <div class="containerr">
         <div class="left-gadgets">
             <div class="album-cover">
-                <img src="assets/img2.png" alt="" class="imgg">
+                <img src="..assets/img2.png" alt="" class="imgg">
                 <div class="description">
                     <p class="larger-desc">
                         {{ albumName }}
@@ -21,20 +17,32 @@
             </div>
         </div>
         <div class="song-list">
-            <ul  *ngFor="let song of songs" class="songs-name">
-                <div class="bg-items">
+            <ul *ngFor="let song of songs; let i = index" class="songs-name">
+                <li class="bg-items" (click)="playSong(i)">
                     <div class="play-img">
                         <div class="inner-play-img">
                             <img src="assets/songg.png" alt="">
-                            <li>{{ song.name }}</li>
-                        </div>
-                        <div class="inner-play-time">
-                            {{ song.duration }}
-                        </div>
-                    </div>
-                    <li class="singer-name">{{ song.singer }}</li>
-                </div>
-            </ul>
+                <li id={{song.name}}>{{ song.name }}</li>
+        </div>
+        <div class="inner-play-time">
+            {{ song.duration }}
         </div>
     </div>
-    
+    <div class="singer-name">
+        {{ song.singer }}
+    </div>
+    </li>
+    </ul>
+    </div>
+    <div id="playerr">
+        <div id="song-title"></div>
+        <div class="playerbtns">
+            <button class="prev" (click)="prev()"><img src="../assets/playerButtons/prev.png"
+                    style="width: 40px; height: 40px;"></button>
+            <button class="play" (click)="playAndPause()"><img src="../assets/playerButtons/play.jpg"
+                    style="width: 25px; height: 25px;"></button>
+            <button class="next" (click)="next()"><img src="../assets/playerButtons/next.png"
+                    style="width: 40px; height: 40px;"></button>
+        </div>
+    </div>
+    </div>
