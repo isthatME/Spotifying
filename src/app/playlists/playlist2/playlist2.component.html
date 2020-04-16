@@ -1,8 +1,9 @@
+<app-navbar></app-navbar>
 <body>
     <div class="containerr">
         <div class="left-gadgets">
             <div class="album-cover">
-                <img src="..assets/img2.png" alt="" class="imgg">
+                <img src="../assets/img2.png" alt="" class="imgg">
                 <div class="description">
                     <p class="larger-desc">
                         {{ albumName }}
@@ -34,15 +35,15 @@
     </li>
     </ul>
     </div>
-    <div id="playerr">
-        <div id="song-title"></div>
-        <div class="playerbtns">
-            <button class="prev" (click)="prev()"><img src="../assets/playerButtons/prev.png"
-                    style="width: 40px; height: 40px;"></button>
-            <button class="play" (click)="playAndPause()"><img src="../assets/playerButtons/play.jpg"
-                    style="width: 25px; height: 25px;"></button>
-            <button class="next" (click)="next()"><img src="../assets/playerButtons/next.png"
-                    style="width: 40px; height: 40px;"></button>
+    <div class="playerr">
+        <img class="left-info-img" src="../assets/img2.png" style="width: 50px; height: 50px;">
+            <div class="left-info">
+                <div id="song-title">{{songs[this.currentSong].name}}</div>
+            </div>
+            <div class="btnsplayer">
+                <button class="prev" (click)="prev()"><img src="../assets/playerButtons/prev.png" style="width: 40px; height: 40px;"></button>
+                <button class="play" (click)="playAndPause()"><img id="playAndPause" src="../assets/playerButtons/play.jpg" style="width: 25px; height: 25px;"></button>
+                <button class="next" (click)="next()"><img src="../assets/playerButtons/next.png"   style="width: 40px; height: 40px;"></button>
+            </div>
         </div>
-    </div>
     </div>

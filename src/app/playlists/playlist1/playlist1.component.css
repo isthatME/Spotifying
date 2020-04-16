@@ -9,7 +9,6 @@ nav{
 .imgg {
     width: 210px;
     height: 210px;
-    box-shadow: 5px 5px 5px rgb(46, 44, 44);
 }
 .containerr{
     width: 100%;
@@ -80,8 +79,7 @@ nav{
 li {
     list-style-type: none;
 }
-.play-img .inner-play-img{
-   
+.play-img .inner-play-img{   
     display: flex;
 }
 .play-img .inner-play-time{
@@ -118,16 +116,17 @@ li {
     background-color: #666;
 }
 /* todos os elementos do player */
-.playerbtns{
+.playerr{
     display: flex;
     width: 100%;
     height: 17.2vh;
     background-color: #282828;
     justify-content: center;
+    
 }
 /* botões do player */
 
-.playerbtns button {
+.playerr button {
     background-color:#282828;
     border: none;
 }
@@ -136,6 +135,17 @@ button {
 }
 
 
-/* barra de progresso */
+/* left info */
+.left-info{
+    display: flex;
+    float: left;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.left-info-img {  
+  display: flex;
+  margin: 0;
+}
 
 

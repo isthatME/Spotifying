@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Playlist2Service } from './playlist2.service';
+declare var $: any
+
 @Component({
   selector: 'app-playlist2',
   templateUrl: './playlist2.component.html',
@@ -18,31 +20,38 @@ export class Playlist2Component implements OnInit {
     this.albumName = this.sng[1].name;
   }
   song = new Audio()
-  currentSong = 0;  
+  currentSong = 0;
   playSong(index: any) {
-    this.currentSong = index;  
-    this.song.src = this.path[this.currentSong]   
+    document.getElementById(this.songs[this.currentSong].name).style.color = "white";
+    this.currentSong = index;
+    this.song.src = this.path[this.currentSong]
     this.song.play()
     document.getElementById(this.songs[this.currentSong].name).style.color = "#1DB954";
+    $(".play img").attr("src","../assets/playerButtons/pause.png")
   }
-
+  
   playAndPause() {
-    if(this.song.paused){
-      this.song.play()
-    }else{
+    if (this.song.paused) {
+      this.song.play(); 
+      $(".play img").attr("src","../assets/playerButtons/pause.png")   
+    
+    } else {
       this.song.pause()
+      $(".play img").attr("src","../assets/playerButtons/play.jpg") 
     }
   }
-  next(){
+  next() {
+    document.getElementById(this.songs[this.currentSong].name).style.color = "white";
     this.currentSong++
-    if(this.currentSong > this.path.length){
+    if (this.currentSong >= this.path.length) {
       this.currentSong = 0
     }
     this.playSong(this.currentSong)
   }
-  prev(){
+  prev() {
+    document.getElementById(this.songs[this.currentSong].name).style.color = "white";
     this.currentSong--
-    if(this.currentSong < 0){
+    if (this.currentSong < 0) {
       this.currentSong = this.path.length
     }
     this.playSong(this.currentSong)

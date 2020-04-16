@@ -23,6 +23,7 @@ export class Playlist1Component implements OnInit {
   song = new Audio()
   currentSong = 0;
   playSong(index: any) {
+    document.getElementById(this.songs[this.currentSong].name).style.color = "white";
     this.currentSong = index;
     this.song.src = this.path[this.currentSong]
     this.song.play()
@@ -37,11 +38,11 @@ export class Playlist1Component implements OnInit {
     
     } else {
       this.song.pause()
-      $(".play img").attr("src","../assets/playerButtons/play.jpg")
-      $(".play img").hover("src","../assets/playerButtons/playOnHover.png")   
+      $(".play img").attr("src","../assets/playerButtons/play.jpg") 
     }
   }
   next() {
+    document.getElementById(this.songs[this.currentSong].name).style.color = "white";
     this.currentSong++
     if (this.currentSong >= this.path.length) {
       this.currentSong = 0
@@ -49,6 +50,7 @@ export class Playlist1Component implements OnInit {
     this.playSong(this.currentSong)
   }
   prev() {
+    document.getElementById(this.songs[this.currentSong].name).style.color = "white";
     this.currentSong--
     if (this.currentSong < 0) {
       this.currentSong = this.path.length
