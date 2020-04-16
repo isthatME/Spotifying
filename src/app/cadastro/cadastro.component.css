@@ -65,10 +65,19 @@ hr {
     margin: 10px;
     color: black;
 }
+.sexo-check{
+    display: flex;
+
+}
+.sexo-check div{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
 .sexo-check input{
     display: inline-block;
-    width: 10px;
-
+    width: 13px;
+    margin: 0 5px 3px 15px;
 }
 label{
     font-weight: bold;
