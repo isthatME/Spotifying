@@ -86,25 +86,25 @@ export const PLAYLIST: Playlist[] = [
                 name: 'Go futher',
                 singer: 'Unknown',
                 duration: '3:24',
-                path: './assets/musics/Come Around Me.mp3'
+                path: './assets/musics/Go further.mp3'
             },
             {
                 name: 'Billie Jean',
                 singer: 'Michael Jackson',
                 duration: '3:22',
-                path: './assets/musics/Come Around Me.mp3'
+                path: './assets/musics/Billie Jean.mp3'
             },
             {
                 name: 'Like a Virgin',
                 singer: 'Madonna',
                 duration: '4:11',
-                path: './assets/musics/Come Around Me.mp3'
+                path: './assets/musics/Like a Virgin.mp3'
             },
             {
                 name: 'Jump',
                 singer: 'Van Halen',
                 duration: '3:44',
-                path: './assets/musics/Come Around Me.mp3'
+                path: './assets/musics/jump.mp3'
             },
         ]
     }
