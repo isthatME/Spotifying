@@ -3,13 +3,14 @@
     <div class="containerr">
         <div class="left-gadgets">
             <div class="album-cover">
-                <img src="https://pbs.twimg.com/media/EPV873wWsAAbdj7.jpg" alt="" class="imgg">
+                <img src=".assets/{{ playlist.cover }}" alt="" class="imgg">
                 <div class="description">
                     <p class="larger-desc">
-                        {{ albumName }}
+                        {{ playlist.name }}
                     </p>
                 </div>
                 <div class="button-sub">
+                
                     <button type="button" (click)="playSong(0)">
                         PLAY
                     </button>
@@ -37,7 +38,7 @@
     </div>
  
     <div class="playerr">
-        <img class="left-info-img" src="../assets/img1.jpg" style="width: 50px; height: 50px;">
+        <img class="left-info-img" src="../assets/{{ playlist.cover }}" style="width: 50px; height: 50px;">
             <div class="left-info">
                 <div id="song-title">{{songs[this.currentSong].name}}</div>
             </div>
@@ -48,3 +49,5 @@
             </div>
         </div>
     </div>
+
+

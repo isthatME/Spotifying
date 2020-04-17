@@ -7,9 +7,15 @@ import { PLAYLIST } from '../playlist1-mock';
 })
 export class PlaylistService {
 
-  constructor() { }
-  
-  get():Playlist[] {
-    return PLAYLIST
+  constructor() {
+
+  }
+  getPlaylistById(id: string): Playlist {
+    return PLAYLIST.find(e => e.id == id)
+  }
+  getMusic(id: string) {
+
+    return PLAYLIST.map(e => e.id == id && e.music)
+
   }
 }

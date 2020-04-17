@@ -2,7 +2,8 @@ import { Playlist } from './playlists';
 
 export const PLAYLIST: Playlist[] = [
     {
-        id: '1',
+        id: '0',
+        cover: '../assets/img1.jpg',
         name: 'Changes',
         music : [
             {
@@ -79,7 +80,8 @@ export const PLAYLIST: Playlist[] = [
         ]
     },
     {
-        id: '2',
+        id: '1',
+        cover: '../assets/img2.png',
         name: 'Anos 80',
         music : [
             {
@@ -107,6 +109,68 @@ export const PLAYLIST: Playlist[] = [
                 path: './assets/musics/jump.mp3'
             },
         ]
+    },{
+        id: '2',
+        cover: '../assets/img3.png',
+        name: 'Funk and Pop',
+        music : [
+            {
+                name: 'Go futher',
+                singer: 'Unknown',
+                duration: '3:24',
+                path: './assets/musics/Go further.mp3'
+            },
+            {
+                name: 'Billie Jean',
+                singer: 'Michael Jackson',
+                duration: '3:22',
+                path: './assets/musics/Billie Jean.mp3'
+            },
+            {
+                name: 'Like a Virgin',
+                singer: 'Madonna',
+                duration: '4:11',
+                path: './assets/musics/Like a Virgin.mp3'
+            },
+            {
+                name: 'Jump',
+                singer: 'Van Halen',
+                duration: '3:44',
+                path: './assets/musics/jump.mp3'
+            },
+        ]
+    },{
+        id: '3',
+        cover: '../assets/img4.png',
+        name: 'Trap',
+        music : [
+            {
+                name: 'Go futher',
+                singer: 'Unknown',
+                duration: '3:24',
+                path: './assets/musics/Go further.mp3'
+            },
+            {
+                name: 'Billie Jean',
+                singer: 'Michael Jackson',
+                duration: '3:22',
+                path: './assets/musics/Billie Jean.mp3'
+            },
+            {
+                name: 'Like a Virgin',
+                singer: 'Madonna',
+                duration: '4:11',
+                path: './assets/musics/Like a Virgin.mp3'
+            },
+            {
+                name: 'Jump',
+                singer: 'Van Halen',
+                duration: '3:44',
+                path: './assets/musics/jump.mp3'
+            },
+        ]
     }
+
+
 
 ]

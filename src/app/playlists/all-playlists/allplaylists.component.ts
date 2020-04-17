@@ -1,3 +1,6 @@
+import { PlaylistService } from './playlist.service';
+import { Playlist } from './../playlists';
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./allPlaylists.component.css']
 })
 export class AllPlaylistsComponent implements OnInit {
-
-  constructor() { }
-
+  
+  playlists: Playlist[];
+  constructor(private pl: PlaylistService) { }
   ngOnInit(): void {
+    this.playlists = this.pl.get()
   }
-
 }

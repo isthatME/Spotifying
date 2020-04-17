@@ -1,24 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { Playlist2Service } from './playlist2.service';
+import { PlaylistService } from './playlist.service';
+import { Playlist } from '../playlists';
+import { ActivatedRoute } from '@angular/router';
+import { Music } from '../music';
 declare var $: any
 
 @Component({
-  selector: 'app-playlist2',
-  templateUrl: './playlist2.component.html',
-  styleUrls: ['./playlist2.component.css']
+  selector: 'app-playlist',
+  templateUrl: './playlist.component.html',
+  styleUrls: ['./playlist.component.css']
 })
-export class Playlist2Component implements OnInit {
-  songs: any[];
-  path: any[];
-  albumName: string;
-  sng: any[];
-  constructor(private pl: Playlist2Service) { }
+
+export class PlaylistComponent implements OnInit {
+  playlist: Playlist;
+  songs: any;
+  path: string;
+  playlistIndex: any;
+  constructor(private pl: PlaylistService,private router: ActivatedRoute) { }
   ngOnInit() {
-    this.sng = this.pl.getPlaylist()
-    this.songs = this.sng[1].music;
+    let id = this.router.snapshot.paramMap.get('id')
+    this.playlistIndex = id
+    this.playlist = this.pl.getPlaylistById(id)
+    this.songs = this.pl.getMusic(id)[this.playlistIndex]
     this.path = this.songs.map(e => e.path)
-    this.albumName = this.sng[1].name;
   }
+  
   song = new Audio()
   currentSong = 0;
   playSong(index: any) {
