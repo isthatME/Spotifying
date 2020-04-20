@@ -1,7 +1,11 @@
 <app-navbar></app-navbar>
 <div class="mainPlaylist">
-    <div class="container" *ngFor="let playlist of playlists">
-        <a routerLink="/playlist/{{ playlist.id }}" routerLinkActive="router-link-active" ><img src="assets/{{playlist.cover}}" ></a>
+    <div class="container">
+        <a routerLink="/playlist/0" routerLinkActive="router-link-active" ><img id="imgg" src="../assets/cover/img1.jpg" ></a>
+        <a routerLink="/playlist/1" routerLinkActive="router-link-active" ><img id="imgg" src="../assets/cover/img2.png" ></a>
+        <a routerLink="/playlist/2" routerLinkActive="router-link-active" ><img id="imgg" src="../assets/cover/img3.png" ></a>
+        <a routerLink="/playlist/3" routerLinkActive="router-link-active" ><img id="imgg" src="../assets/cover/img4.png" ></a>
+
     </div>
     <div class="covid">
         <p>Proteja-se do Covid-19, não saia de casa</p>
