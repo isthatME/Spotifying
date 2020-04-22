@@ -3,7 +3,7 @@ import { Playlist } from './playlists';
 export const PLAYLIST: Playlist[] = [
     {
         id: '0',
-        cover: '../assets/img1.jpg',
+        cover: '../assets/cover/img1.jpg',
         name: 'Changes',
         music : [
             {
@@ -81,7 +81,7 @@ export const PLAYLIST: Playlist[] = [
     },
     {
         id: '1',
-        cover: '../assets/img2.png',
+        cover: '../assets/cover/img2.png',
         name: 'Anos 80',
         music : [
             {
@@ -111,7 +111,7 @@ export const PLAYLIST: Playlist[] = [
         ]
     },{
         id: '2',
-        cover: '../assets/img3.png',
+        cover: '../assets/cover/img3.png',
         name: 'Funk and Pop',
         music : [
             {
@@ -136,12 +136,12 @@ export const PLAYLIST: Playlist[] = [
                 name: 'Jump',
                 singer: 'Van Halen',
                 duration: '3:44',
-                path: './assets/musics/jump.mp3'
+                path: './assets/musics/cover/jump.mp3'
             },
         ]
     },{
         id: '3',
-        cover: '../assets/img4.png',
+        cover: '../assets/cover/img4.png',
         name: 'Trap',
         music : [
             {

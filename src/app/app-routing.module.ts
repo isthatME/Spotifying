@@ -9,11 +9,11 @@ import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.co
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'allPlaylists', component: AllPlaylistsComponent },
-  { path: 'playlist/:id', component: PlaylistComponent }, 
-  { path: 'home', component: HomeComponent },
-  { path: 'cadastro', component: CadastroComponent },
-  { path: 'faq', component: FaqComponent }
+  { path: 'allPlaylists', pathMatch: 'full', component: AllPlaylistsComponent },
+  { path: 'playlist/:id', pathMatch: 'full', component: PlaylistComponent }, 
+  { path: 'home', pathMatch: 'full', component: HomeComponent },
+  { path: 'cadastro', pathMatch: 'full', component: CadastroComponent },
+  { path: 'faq', pathMatch: 'full', component: FaqComponent }
 ];
 
 @NgModule({

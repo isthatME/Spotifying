@@ -17,7 +17,7 @@ nav{
 }
 .left-gadgets{
     float: left;
-    margin: 100px 0px 0px 150px;
+    margin: 100px 0px 0px 130px;
 }
 .button-sub button {
     padding: 10px;
@@ -56,7 +56,7 @@ nav{
 
 .song-list {
     float: right;
-    margin: 100px 50px 0px 25px;
+    margin: 100px 40px 0px 25px;
     color: white;
     font-family: sans-serif;
     font-weight: bold;
