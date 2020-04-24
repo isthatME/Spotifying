@@ -1,10 +1,11 @@
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
-    height: 9vh;
-}
-nav{
-    background-color: blue;
+    height: 1px;
 }
 .imgg {
     width: 210px;
@@ -115,13 +116,14 @@ li {
 ::-webkit-scrollbar-thumb:vertical {
     background-color: #666;
 }
+
+
 /* todos os elementos do player */
 .playerr{
     display: flex;
     width: 100%;
-    height: 17.2vh;
+    height: 13.2vh;
     background-color: #282828;
-    justify-content: center;
     
 }
 /* botões do player */
@@ -133,19 +135,32 @@ li {
 button {
     outline-style: none;
 }
-
-
 /* left info */
 .left-info{
     display: flex;
-    float: left;
     color: white;
     font-family: sans-serif;
     font-weight: bold;
+
 }
-.left-info-img {  
-  display: flex;
-  margin: 0;
+
+/* out of playerr div */
+.left-info { 
+   display: flex;
+   margin: 20px;
+   
+}
+.current-song {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2vh;
+}
+.btnsplayer {
+    position: absolute;
+    margin: 20px;
+    margin-left: 80vh;
 }
 
 
