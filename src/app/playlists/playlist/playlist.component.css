@@ -16,6 +16,15 @@ body{
                         width: 210px;
                         height: 210px;
 }
+
+.backward{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 15px;
+}
+a > i:hover {
+    color: rgb(197, 189, 189);
+}
 .left-gadgets{
     float: left;
     margin: 100px 0px 0px 130px;
@@ -161,5 +170,6 @@ button {
     margin-left: 45vw;
     margin-top: 5.5vh;
 }
+
 
 
