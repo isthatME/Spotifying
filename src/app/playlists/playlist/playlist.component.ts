@@ -40,11 +40,13 @@ export class PlaylistComponent implements OnInit {
   
   playAndPause() {
     if (this.song.paused) {
-      $('.play i').removeClass('fas fa-play').addClass('fas fa-pause') 
+      $('.play i').removeClass('fas fa-play').addClass('fas fa-pause')
+      $('.play-pause-larger i').removeClass('fas fa-play-circle').addClass('fas fa-pause')
       this.song.play(); 
     
     } else {
       $('.play i').removeClass('fas fa-pause').addClass('fas fa-play') 
+      $('.play-pause-larger i').removeClass('fas fa-pause').addClass('fas fa-play-circle')
       this.song.pause()
     }
   }

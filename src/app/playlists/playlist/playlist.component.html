@@ -1,11 +1,18 @@
 <body>
     <div class="containerr">
+        <div class="backward"  >
+          <a routerLink="/allPlaylists" style=" color: white; font-size: 50px;" >
+            <i class="far fa-arrow-alt-circle-left"></i>
+        </a>              
+        </div>
         <div class="left-gadgets">
-            <div class="backward"  >
-              <a routerLink="/allPlaylists" style=" color: white; font-size: 50px;" >
-                <i class="far fa-arrow-alt-circle-left"></i>
-            </a>
-              
+            <div class="play-heart">
+                <div class="play-pause-larger">
+                    <i class="fas fa-play-circle" style="font-size: 57px;" (click)="playAndPause()"></i>
+                </div>
+                <div class="hearted-album">
+                    <i class="fas fa-heart"></i>
+                </div> 
             </div>
             <div class="album-cover">
                 <img src=".assets/{{ playlist.cover }}" alt="" class="imgg">
@@ -26,7 +33,7 @@
                 <li class="bg-items" (click)="playSong(i)">
                     <div class="play-img">
                         <div class="inner-play-img">
-                            <img src="assets/cover/songg.png" alt="">
+                            <i class="fas fa-music"></i>
                             <li id={{song.name}}>{{ song.name }}</li>
                         </div>
                         <div class="inner-play-time">
@@ -49,9 +56,9 @@
                 </div>
             </div>
              <div class="btnsplayer">
-                    <button class="prev" (click)="prev()" style="font-size: 20px; color: white;"><i class="fas fa-step-backward"></i></button>
-                    <button class="play" (click)="playAndPause()" style="font-size: 23px; color: white;"><i id="playAndPause" class="fas fa-play"></i></button>
-                    <button class="next" (click)="next()" style="font-size: 20px; color: white;"><i class="fas fa-step-forward"></i></button>
+                    <button class="prev" (click)="prev()" style="font-size: 18px; color: rgb(219, 216, 216);"><i class="fas fa-step-backward"></i></button>
+                    <button class="play" (click)="playAndPause()" style="font-size: 19px; color: rgb(219, 216, 216);"><i id="playAndPause" class="fas fa-play"></i></button>
+                    <button class="next" (click)="next()" style="font-size: 18px; color: rgb(219, 216, 216);"><i class="fas fa-step-forward"></i></button>
              </div>
         </div>
     </div>
