@@ -31,19 +31,21 @@ export class PlaylistComponent implements OnInit {
     document.getElementById(this.songs[this.currentSong].name).style.color = "white";
     this.currentSong = index;
     this.song.src = this.path[this.currentSong]
-    this.song.play()
+    $('.play i').removeClass('fas fa-play').addClass('fas fa-pause')
+    this.playAndPause()
     document.getElementById(this.songs[this.currentSong].name).style.color = "#1DB954";
-    $(".play img").attr("src","../assets/playerButtons/pause.png")
+      
   }
+  
   
   playAndPause() {
     if (this.song.paused) {
+      $('.play i').removeClass('fas fa-play').addClass('fas fa-pause') 
       this.song.play(); 
-      $(".play img").attr("src","../assets/playerButtons/pause.png")   
     
     } else {
+      $('.play i').removeClass('fas fa-pause').addClass('fas fa-play') 
       this.song.pause()
-      $(".play img").attr("src","../assets/playerButtons/play.jpg") 
     }
   }
   next() {

@@ -2,8 +2,8 @@
     <div class="containerr">
         <div class="left-gadgets">
             <div class="backward"  >
-              <a routerLink="/allPlaylists" style=" color: rgb(187, 34, 34); font-size: 50px;" >
-                <i class="fas fa-arrow-alt-circle-left"></i>
+              <a routerLink="/allPlaylists" style=" color: white; font-size: 50px;" >
+                <i class="far fa-arrow-alt-circle-left"></i>
             </a>
               
             </div>
@@ -49,9 +49,9 @@
                 </div>
             </div>
              <div class="btnsplayer">
-                    <button class="prev" (click)="prev()"><img src="../assets/playerButtons/prev.png" style="width: 40px; height: 40px;"></button>
-                    <button class="play" (click)="playAndPause()"><img id="playAndPause" src="../assets/playerButtons/play.jpg" style="width: 25px; height: 25px;"></button>
-                    <button class="next" (click)="next()"><img src="../assets/playerButtons/next.png"   style="width: 40px; height: 40px;"></button>
+                    <button class="prev" (click)="prev()" style="font-size: 20px; color: white;"><i class="fas fa-step-backward"></i></button>
+                    <button class="play" (click)="playAndPause()" style="font-size: 23px; color: white;"><i id="playAndPause" class="fas fa-play"></i></button>
+                    <button class="next" (click)="next()" style="font-size: 20px; color: white;"><i class="fas fa-step-forward"></i></button>
              </div>
         </div>
     </div>
