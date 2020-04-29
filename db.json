@@ -1,0 +1,128 @@
+{
+    "playlists": [
+        {
+            "id": "0",
+            "cover": "../assets/cover/img1.jpg",
+            "name": "Changes",
+            "music": [
+                {
+                    "name": "Come Around Me",
+                    "singer": "justin Bieber",
+                    "duration": "4:24",
+                    "path": "./assets/musics/Come Around Me.mp3"
+                },
+                {
+                    "name": "'E.T.A",
+                    "singer": "justin Bieber",
+                    "duration": "3:24",
+                    "path": "./assets/musics/E.T.A.mp3"
+                },
+                {
+                    "name": "Confirmation",
+                    "singer": "Justin bieber",
+                    "duration": "2:48",
+                    "path": "./assets/musics/Confirmation.mp3"
+                },
+                {
+                    "name": "'Forever feat. Post Malone'",
+                    "singer": "justin Bieber",
+                    "duration": "3:14",
+                    "path": "./assets/musics/Come Around Me.mp3"
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "cover": "../assets/cover/img2.png",
+            "name": "Brasil anos 80",
+            "music": [
+                {
+                    "name": "Come Around Me",
+                    "singer": "justin Bieber",
+                    "duration": "4:24",
+                    "path": "./assets/musics/Come Around Me.mp3"
+                },
+                {
+                    "name": "'E.T.A",
+                    "singer": "justin Bieber",
+                    "duration": "3:24",
+                    "path": "./assets/musics/E.T.A.mp3"
+                },
+                {
+                    "name": "Confirmation",
+                    "singer": "Justin bieber",
+                    "duration": "2:48",
+                    "path": "./assets/musics/Confirmation.mp3"
+                },
+                {
+                    "name": "'Forever feat. Post Malone'",
+                    "singer": "justin Bieber",
+                    "duration": "3:14",
+                    "path": "./assets/musics/Come Around Me.mp3"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "cover": "../assets/cover/img3.png",
+            "name": "Funk e Pop",
+            "music": [
+                {
+                    "name": "Come Around Me",
+                    "singer": "justin Bieber",
+                    "duration": "4:24",
+                    "path": "./assets/musics/Come Around Me.mp3"
+                },
+                {
+                    "name": "'E.T.A",
+                    "singer": "justin Bieber",
+                    "duration": "3:24",
+                    "path": "./assets/musics/E.T.A.mp3"
+                },
+                {
+                    "name": "Confirmation",
+                    "singer": "Justin bieber",
+                    "duration": "2:48",
+                    "path": "./assets/musics/Confirmation.mp3"
+                },
+                {
+                    "name": "'Forever feat. Post Malone'",
+                    "singer": "justin Bieber",
+                    "duration": "3:14",
+                    "path": "./assets/musics/Come Around Me.mp3"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "cover": "../assets/cover/img4.png",
+            "name": "Trap",
+            "music": [
+                {
+                    "name": "Come Around Me",
+                    "singer": "justin Bieber",
+                    "duration": "4:24",
+                    "path": "./assets/musics/Come Around Me.mp3"
+                },
+                {
+                    "name": "'E.T.A",
+                    "singer": "justin Bieber",
+                    "duration": "3:24",
+                    "path": "./assets/musics/E.T.A.mp3"
+                },
+                {
+                    "name": "Confirmation",
+                    "singer": "Justin bieber",
+                    "duration": "2:48",
+                    "path": "./assets/musics/Confirmation.mp3"
+                },
+                {
+                    "name": "'Forever feat. Post Malone'",
+                    "singer": "justin Bieber",
+                    "duration": "3:14",
+                    "path": "./assets/musics/Come Around Me.mp3"
+                }
+            ]
+        }
+    ]
+}
