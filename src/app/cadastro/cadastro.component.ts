@@ -1,4 +1,4 @@
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule,FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,20 +7,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
-  isEqual: boolean = true
-  showsError: boolean = true
-  onSubmit(form: NgForm) {
-    if (form.value.email != form.value.email2) {
-      this.isEqual = false
-    } else {      
-      this.showsError = false
-      form.reset()
-    }
-  }
-
-  constructor() { }
-
+  formulario: FormGroup;
+  
+  constructor(private formBuilder: FormBuilder) { }
+  
   ngOnInit(): void {
-  }
+    
+    this.formulario = this.formBuilder.group({
 
+    })
+  }
+  
 }
+
+
+
+// isEqual: boolean = true
+// showsError: boolean = true
+// onSubmit(form: NgForm) {
+//   if (form.value.email != form.value.email2) {
+//     this.isEqual = false
+//   } else {      
+//     this.showsError = false
+//     form.reset()
+//   }
+// }
+
+
+
+
+
+
+
+

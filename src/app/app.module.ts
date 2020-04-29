@@ -7,9 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
 import { PlaylistComponent } from './playlists/playlist/playlist.component';
 import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.component';
+import { CadastroModule } from './cadastro/cadastro.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.co
     routingComponents,
     FaqComponent,
     HomeComponent,
-    CadastroComponent,
     PlaylistComponent,
     AllPlaylistsComponent
   ],
@@ -27,6 +26,7 @@ import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    CadastroModule,
     ReactiveFormsModule
   ],
   providers: [],
