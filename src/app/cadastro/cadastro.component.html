@@ -1,11 +1,11 @@
-<!-- <app-navbar></app-navbar>
+<app-navbar></app-navbar>
 
-<form >
+<form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
     <div class="form">
         <div class="logo-spotify">
             <img src="../assets/cadastroLogo.png" alt="logo-spotify">
         </div>
-        <div class="alert alert-success" role="alert">
+        <div *ngIf="!showsError" class="alert alert-success" role="alert">
             Usuário cadastro com sucesso!
         </div>
         <hr>
@@ -15,13 +15,36 @@
             </div>
         </div>
         <div class="form-dados">
-            <input type="email" name="email" id="email" placeholder="E-mail">
-            <input type="email" name="email2" id="email-confirmation" placeholder="E-mail-confirmation">
-            <input type="password" name="password" id="password" placeholder="Senha" >
-            <input type="password" name="password2" id="password" placeholder="Confirme sua senha">
-            <input type="text" name="nickname" id="nickname" placeholder="Como deveriamos chamar você?">          
-            <input type="text" name="dia" id="dia-data" placeholder="Dia">
-            <select name="mes" id="mes" aria-placeholder="">
+            <div *ngIf="!isEqual && showsError" class="alert alert-danger" role="alert">
+                Os emails não são iguais
+            </div>
+            <input type="email" formControlName="email" id="email" placeholder="E-mail">
+            <div *ngIf="formulario.controls.email.touched && !formulario.controls.email.valid"
+                class="alert alert-danger" role="alert">
+                Campo obrigatório
+            </div>
+            <input type="email" formControlName="email2" id="email-confirmation" placeholder="E-mail-confirmation">
+            <div *ngIf="formulario.controls.email2.touched && !formulario.controls.email2.valid"
+                class="alert alert-danger" role="alert">
+                Campo obrigatório
+            </div>
+            <input type="password" formControlName="password" id="password" placeholder="Senha">
+            <div *ngIf="formulario.controls.password.touched && !formulario.controls.password.valid" class="alert alert-danger"
+                role="alert">
+                Campo obrigatório
+            </div>
+            <input type="password" formControlName="password2" id="password" placeholder="Confirme sua senha">
+            <div *ngIf="formulario.controls.password2.touched && !formulario.controls.password2.valid" class="alert alert-danger"
+                role="alert">
+                Campo obrigatório
+            </div>
+            <input type="text" formControlName="nickname" id="nickname" placeholder="Como deveriamos chamar você?">
+            <div *ngIf="formulario.controls.nickname.touched && !formulario.controls.nickname.valid" class="alert alert-danger"
+                role="alert">
+                Campo obrigatório
+            </div>
+            <input type="text" formControlName="dia" id="dia-data" placeholder="Dia">
+            <select formControlName="mes" id="mes" aria-placeholder="">
                 <option value="null" selected disabled hidden>Mês</option>
                 <option value="janeiro">Janeiro</option>
                 <option value="fevereiro">Fevereiro</option>
@@ -36,8 +59,8 @@
                 <option value="novembro">Novembro</option>
                 <option value="dezembro">Dezembro</option>
             </select>
-            <input type="text" name="ano" id="ano-data" placeholder="Ano" >
-            <div class="sexo-check" ngModel>
+            <input type="text" formControlName="ano" id="ano-data" placeholder="Ano">
+            <div class="sexo-check">
                 <div>
                     <input type="radio" name="sexo" id="masculino">
                     <label for="masculino">Masculino</label>
@@ -57,8 +80,5 @@
         <div class="button-sub">
             <button type="submit">INSCREVER-SE</button>
         </div>
-        <div class="alert alert-success" role="alert">
-            Usuário cadastro com sucesso!
-        </div>
     </div>
-</form> -->
+</form>

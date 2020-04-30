@@ -9,7 +9,8 @@ import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
 import { PlaylistComponent } from './playlists/playlist/playlist.component';
 import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.component';
-import { CadastroModule } from './cadastro/cadastro.module';
+import { CadastroComponent } from './cadastro/cadastro.component';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CadastroModule } from './cadastro/cadastro.module';
     FooterComponent,
     routingComponents,
     FaqComponent,
+    CadastroComponent,
     HomeComponent,
     PlaylistComponent,
     AllPlaylistsComponent
@@ -26,7 +28,6 @@ import { CadastroModule } from './cadastro/cadastro.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CadastroModule,
     ReactiveFormsModule
   ],
   providers: [],
