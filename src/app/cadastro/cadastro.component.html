@@ -15,18 +15,18 @@
             </div>
         </div>
         <div class="form-dados">
-            <div *ngIf="!isEqual && showsError" class="alert alert-danger" role="alert">
+            <div *ngIf="isEqual && showsError" class="alert alert-danger" role="alert">
                 Os emails não são iguais
             </div>
             <input type="email" formControlName="email" id="email" placeholder="E-mail">
             <div *ngIf="formulario.controls.email.touched && !formulario.controls.email.valid"
                 class="alert alert-danger" role="alert">
-                Campo obrigatório
+                Campo vazio ou inválido
             </div>
             <input type="email" formControlName="email2" id="email-confirmation" placeholder="E-mail-confirmation">
             <div *ngIf="formulario.controls.email2.touched && !formulario.controls.email2.valid"
                 class="alert alert-danger" role="alert">
-                Campo obrigatório
+                Campo vazio ou inválido
             </div>
             <input type="password" formControlName="password" id="password" placeholder="Senha">
             <div *ngIf="formulario.controls.password.touched && !formulario.controls.password.valid" class="alert alert-danger"
