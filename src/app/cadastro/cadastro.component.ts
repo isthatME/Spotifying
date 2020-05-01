@@ -1,3 +1,4 @@
+import { UserService } from './../usuario/user.service';
 import {FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,10 @@ export class CadastroComponent implements OnInit {
   formulario: FormGroup;
   isEqual: boolean = false;
   showsError: boolean = true  
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService : UserService
+    ) { }
   
   ngOnInit(): void {
     
@@ -30,8 +34,16 @@ export class CadastroComponent implements OnInit {
       this.isEqual = true
     }else {
       this.showsError = false
-      this.formulario.reset()
+      // this.formulario.reset()
     }
+
+    this.userService.createUser({ 
+      name: form.value.nickname,
+      email: form.value.email,
+      password: form.value.password,
+    }).subscribe(
+      data => console.log('success',data)
+    )
 
   }
 }

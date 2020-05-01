@@ -11,11 +11,12 @@ declare var $: any
   styleUrls: ['./playlist.component.css']
 })
 
-export class PlaylistComponent implements OnInit {
+export class PlaylistComponent implements OnInit {  
   playlist: Playlist
   songs: any
   path: any;
   playlistIndex: any;
+
   constructor(private pl: PlaylistService,private router: ActivatedRoute) { }
   ngOnInit() {
     let id = this.router.snapshot.paramMap.get('id')
@@ -29,6 +30,7 @@ export class PlaylistComponent implements OnInit {
   
   song = new Audio()
   currentSong = 0;
+
   playSong(index: any) {
     document.getElementById(this.playlist.music[this.currentSong].name).style.color = "white";
     this.currentSong = index;
