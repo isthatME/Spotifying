@@ -9,14 +9,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./allPlaylists.component.css']
 })
 export class AllPlaylistsComponent implements OnInit {
-  playlists: Playlist[];
-  playlist$: Observable<Playlist[]>;
+  playlist$: Playlist[];
 
   constructor(private pl: PlaylistService) { }
-  ngOnInit(): void {
-    
-    this.playlist$ = this.pl.getPlaylist();
-
+  ngOnInit(): void {    
+    this.pl.getPlaylist().subscribe((data:any) => {
+    this.playlist$ = data
+    })
   }
 
 }

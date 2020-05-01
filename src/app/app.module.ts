@@ -9,8 +9,8 @@ import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
 import { PlaylistComponent } from './playlists/playlist/playlist.component';
 import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     routingComponents,
     FaqComponent,
-    CadastroComponent,
+    RegisterComponent,
     HomeComponent,
     PlaylistComponent,
     AllPlaylistsComponent
