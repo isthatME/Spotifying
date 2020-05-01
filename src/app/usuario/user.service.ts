@@ -14,6 +14,6 @@ export class UserService {
    }
 
    createUser(user: User){
-     return this.http.post<any>(this.API, user)
+     return this.http.post<User>(this.API, user)
    }
 }

@@ -126,5 +126,17 @@
     }
   ],
   "users": [
+    {
+      "name": "gui@gui.com",
+      "email": "gui@gui.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "gui@gui.com",
+      "email": "gui@gui.com",
+      "password": "gui@gui.com",
+      "id": 2
+    }
   ]
 }
