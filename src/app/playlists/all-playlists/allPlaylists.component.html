@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="mainPlaylist">
-    <div class="container" *ngFor="let play of playlist$">
-        <div >
+    <div class="containerr" >
+        <div class="container" *ngFor="let play of playlist$">
             <a routerLink="/playlist/{{play.id}}" routerLinkActive="router-link-active" ><img id="imgg" src="{{play.cover}}" ></a>
         </div>
     </div>

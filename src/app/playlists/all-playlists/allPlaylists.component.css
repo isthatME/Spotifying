@@ -9,7 +9,7 @@
     background-image: linear-gradient(rgb(182, 107, 168), rgb(118, 163, 219),rgb(12, 11, 11));
 
 }
-.container{
+.containerr{
     display: grid;
     float: right;
     margin: 70px 200px 0px 0px;
