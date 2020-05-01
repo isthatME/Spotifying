@@ -1,15 +1,19 @@
+import { environment } from './../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Playlist } from '../playlists';
-import { PLAYLIST } from '../playlist1-mock';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlaylistService {
 
-  constructor() { }
+  private readonly API = `${environment.API}playlists` 
   
-  get():Playlist[] {
-    return PLAYLIST
+
+  constructor(private http: HttpClient) { }
+  
+  getPlaylist(){
+    return this.http.get<Playlist[]>(this.API)
   }
 }

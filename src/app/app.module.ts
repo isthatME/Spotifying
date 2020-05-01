@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { PlaylistComponent } from './playlists/playlist/playlist.component';
 import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

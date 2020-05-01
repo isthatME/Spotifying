@@ -1,4 +1,4 @@
-import { FormsModule,FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -35,19 +35,6 @@ export class CadastroComponent implements OnInit {
 
   }
 }
-
-
-
-// isEqual: boolean = true
-// showsError: boolean = true
-// onSubmit(form: NgForm) {
-//   if (form.value.email != form.value.email2) {
-//     this.isEqual = false
-//   } else {      
-//     this.showsError = false
-//     form.reset()
-//   }
-// }
 
 
 

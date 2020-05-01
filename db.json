@@ -1,7 +1,7 @@
 {
     "playlists": [
         {
-            "id": "0",
+            "id": 0,
             "cover": "../assets/cover/img1.jpg",
             "name": "Changes",
             "music": [
@@ -32,7 +32,7 @@
             ]
         },
         {
-            "id": "1",
+            "id": 1,
             "cover": "../assets/cover/img2.png",
             "name": "Brasil anos 80",
             "music": [
@@ -63,7 +63,7 @@
             ]
         },
         {
-            "id": "2",
+            "id": 2,
             "cover": "../assets/cover/img3.png",
             "name": "Funk e Pop",
             "music": [
@@ -94,7 +94,7 @@
             ]
         },
         {
-            "id": "3",
+            "id": 3,
             "cover": "../assets/cover/img4.png",
             "name": "Trap",
             "music": [

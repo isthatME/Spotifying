@@ -1,6 +1,7 @@
 import { PlaylistService } from './playlist.service';
 import { Playlist } from './../playlists';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-allPlaylists',
@@ -8,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./allPlaylists.component.css']
 })
 export class AllPlaylistsComponent implements OnInit {
-  
   playlists: Playlist[];
+  playlist$: Observable<Playlist[]>;
+
   constructor(private pl: PlaylistService) { }
   ngOnInit(): void {
-    this.playlists = this.pl.get()
+    
+    this.playlist$ = this.pl.getPlaylist();
+
   }
+
 }

@@ -12,17 +12,22 @@ declare var $: any
 })
 
 export class PlaylistComponent implements OnInit {
-  playlist: Playlist;
-  songs: any;
-  path: string;
+  playlist: Playlist
+  songs: Music
+  path: any;
   playlistIndex: any;
   constructor(private pl: PlaylistService,private router: ActivatedRoute) { }
   ngOnInit() {
     let id = this.router.snapshot.paramMap.get('id')
     this.playlistIndex = id
-    this.playlist = this.pl.getPlaylistById(id)
-    this.songs = this.pl.getMusic(id)[this.playlistIndex]
-    this.path = this.songs.map(e => e.path)
+    this.pl.getPlaylistById(id).subscribe(data => {
+      this.playlist = data
+    })
+    this.songs = this.playlist.music[0]
+    this.path = this.songs.path
+    // this.playlist. = this.pl.get(id)[this.playlistIndex]
+
+
   }
   
   song = new Audio()
