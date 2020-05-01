@@ -1,8 +1,8 @@
+import { Playlist } from './../playlists';
 import { Component, OnInit } from '@angular/core';
 import { PlaylistService } from './playlist.service';
-import { Playlist } from '../playlists';
 import { ActivatedRoute } from '@angular/router';
-import { Music } from '../music';
+
 declare var $: any
 
 @Component({
@@ -13,36 +13,32 @@ declare var $: any
 
 export class PlaylistComponent implements OnInit {
   playlist: Playlist
-  songs: Music
+  songs: any
   path: any;
   playlistIndex: any;
   constructor(private pl: PlaylistService,private router: ActivatedRoute) { }
   ngOnInit() {
     let id = this.router.snapshot.paramMap.get('id')
     this.playlistIndex = id
-    this.pl.getPlaylistById(id).subscribe(data => {
+    this.pl.getPlaylistById(id).subscribe((data:Playlist) => {
       this.playlist = data
+      this.songs = this.playlist.music
+      this.path = this.playlist.music.map(e => e.path)   
     })
-    this.songs = this.playlist.music[0]
-    this.path = this.songs.path
-    // this.playlist. = this.pl.get(id)[this.playlistIndex]
-
-
   }
   
   song = new Audio()
   currentSong = 0;
   playSong(index: any) {
-    document.getElementById(this.songs[this.currentSong].name).style.color = "white";
+    document.getElementById(this.playlist.music[this.currentSong].name).style.color = "white";
     this.currentSong = index;
     this.song.src = this.path[this.currentSong]
+    console.log(this.path[0])
     $('.play i').removeClass('fas fa-play').addClass('fas fa-pause')
     this.playAndPause()
     document.getElementById(this.songs[this.currentSong].name).style.color = "#1DB954";
       
   }
-  
-  
   playAndPause() {
     if (this.song.paused) {
       $('.play i').removeClass('fas fa-play').addClass('fas fa-pause')
