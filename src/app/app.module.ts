@@ -11,7 +11,7 @@ import { PlaylistComponent } from './playlists/playlist/playlist.component';
 import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
-
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
     FaqComponent,
     RegisterComponent,
     HomeComponent,
+    LoginComponent ,
     PlaylistComponent,
     AllPlaylistsComponent
   ],
