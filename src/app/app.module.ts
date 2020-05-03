@@ -12,6 +12,8 @@ import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.co
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { UsernavbarComponent } from './navbar/usernavbar/usernavbar.component';
+import { SearchComponent } from './playlists/search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     LoginComponent ,
     PlaylistComponent,
-    AllPlaylistsComponent
+    AllPlaylistsComponent,
+    UsernavbarComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

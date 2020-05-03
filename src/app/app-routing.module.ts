@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { SearchComponent } from './playlists/search/search.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'home', pathMatch: 'full', component: HomeComponent },
   { path: 'register', pathMatch: 'full', component: RegisterComponent },
   { path: 'faq', pathMatch: 'full', component: FaqComponent },
-  { path: 'login', pathMatch: 'full', component: LoginComponent }
+  { path: 'login', pathMatch: 'full', component: LoginComponent },
+  { path: 'search', pathMatch: 'full', component: SearchComponent }
 ];
 
 @NgModule({
