@@ -10,7 +10,7 @@
     </div>
         <div class="list-items" >
           <ul>
-            <li><a routerLink="/search" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Search</a></li>
+            <li><input type="text" (click)="navigate()"><a routerLink="/search" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> Search</a></li>
             <li><a routerLink="/allPlaylists" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">PlayList</a></li>
             <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">logout</a></li>
 

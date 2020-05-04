@@ -8,6 +8,9 @@ import { retry, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PlaylistService {
+  searchPlaylist(event: any) {
+    throw new Error("Method not implemented.");
+  }
   readonly playlistUrl = 'http://localhost:3000/playlists/'
   constructor(private http: HttpClient) {
 

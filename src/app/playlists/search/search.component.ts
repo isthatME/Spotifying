@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from './search.service';
+
+
 
 @Component({
   selector: 'app-search',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
-  constructor() { }
+  playlistSearched: any;
+  constructor(
+    private searchService: SearchService,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onKeyUp(event) {
+    this.searchService.searchPlaylist(event).subscribe((data: any) => {
+      this.playlistSearched = data
+      console.log(this.playlistSearched)
+    })
   }
 
 }

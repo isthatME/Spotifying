@@ -57,3 +57,9 @@ nav{
   .navbar-container{
     margin: 10px;
   }
+  input {
+   width: 9vw;
+   height: 4vh;
+   margin-top: 14px;
+   border-radius: 10px 10px 10px;
+  }

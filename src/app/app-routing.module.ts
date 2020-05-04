@@ -7,17 +7,20 @@ import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.co
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './playlists/search/search.component';
-
+import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'allPlaylists', pathMatch: 'full', component: AllPlaylistsComponent },
+  { path: 'allPlaylists', pathMatch: 'full', component: AllPlaylistsComponent},
   { path: 'playlist/:id', pathMatch: 'full', component: PlaylistComponent }, 
   { path: 'home', pathMatch: 'full', component: HomeComponent },
   { path: 'register', pathMatch: 'full', component: RegisterComponent },
   { path: 'faq', pathMatch: 'full', component: FaqComponent },
   { path: 'login', pathMatch: 'full', component: LoginComponent },
-  { path: 'search', pathMatch: 'full', component: SearchComponent }
+  { path: 'search', pathMatch: 'full', component: SearchComponent },
+  { path: 'signin', pathMatch: 'full', component: SigninComponent },
+  { path: 'SignupComponent', component: SignupComponent}
 ];
 
 @NgModule({

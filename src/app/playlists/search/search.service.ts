@@ -6,7 +6,7 @@ import { HttpClient, HttpParams } from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
-export class PlaylistService {
+export class SearchService {
 
   private readonly API = `${environment.API}playlists` 
 
@@ -14,7 +14,10 @@ export class PlaylistService {
 
   constructor(private http: HttpClient) { }
   
-  getPlaylist(){
-    return this.http.get<Playlist[]>(this.API)
+  
+  searchPlaylist(term: string){  
+    return this.http.get<Playlist[]>(`${this.API}/?name=${term}`)
   }
 }
+
+  

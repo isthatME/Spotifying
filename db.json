@@ -131,12 +131,56 @@
       "email": "gui@gui.com",
       "password": "123",
       "id": 1
+    }
+  ],
+  "login": [
+    {
+      "name": "Guilherme",
+      "email": "123",
+      "password": "123",
+      "id": 1
     },
     {
-      "name": "gui@gui.com",
-      "email": "gui@gui.com",
-      "password": "gui@gui.com",
+      "name": "Guilherme",
+      "email": "123",
+      "password": "123",
       "id": 2
+    },
+    {
+      "name": "Guilherme",
+      "email": "123",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "Guilherme",
+      "email": "123",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "Guilherme",
+      "email": "123",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "name": "Guilherme",
+      "email": "123",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "name": "Guilherme",
+      "email": "123",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "name": "Guilherme",
+      "email": "guilherme",
+      "password": "gaagui1633",
+      "id": 8
     }
   ]
 }

@@ -9,11 +9,15 @@ import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
 import { PlaylistComponent } from './playlists/playlist/playlist.component';
 import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { UsernavbarComponent } from './navbar/usernavbar/usernavbar.component';
 import { SearchComponent } from './playlists/search/search.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { AuthInterceptor } from './shared/authconfig.interceptor';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,10 @@ import { SearchComponent } from './playlists/search/search.component';
     PlaylistComponent,
     AllPlaylistsComponent,
     UsernavbarComponent,
-    SearchComponent
+    SearchComponent,
+    SignupComponent,
+    UserProfileComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,13 @@ import { SearchComponent } from './playlists/search/search.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
