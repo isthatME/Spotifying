@@ -1,2 +1,62 @@
 <app-usernavbar></app-usernavbar>
-<input type="text" (keyup.enter)="onKeyUp($event.target.value)">
+<!-- <div class="select-playlist">
+  <div class="custom-select" style="width:200px;">
+    <select>
+      <option value="0"></option>
+  </div>
+</div> -->
+<div *ngIf="playlistSelected == null">
+  <select *ngFor="let play of playlistName" id="select-playlist" (change)="getValue($event)"> 
+      <option value="default">Selecione uma playlist</option>
+      <option *ngFor="let name of play" >{{ name }}</option>
+  </select>
+</div>
+<div class="listagem" *ngIf="playlistSelected != null">
+  <form id="term">
+      <input type="text" (keyup.enter)="onEnter()">
+      <button class="searchBtn" (click)="onEnter()">Pesquisar</button>
+  </form>
+  <!-- <div *ngFor="let play of playlistSearched">
+      <div *ngFor="let music of play.music" style="display: block;">
+          {{ music.name }}
+      </div>
+  </div> -->
+  <div class="card mt-3">
+      <div class="card-header">
+        <div class="float-left">
+          <h4>Musicas</h4>
+        </div>
+        <div class="float-right">
+          <button type="button" class="btn btn-primary">Nova Playlist</button>
+          {{ ' ' }}
+          <button type="button" class="btn btn-secondary">Atualizar</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Musica</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let play of playlistSearched">
+            <tr *ngFor="let music of play; let i = index" >
+              <td> {{ i }}</td>
+              <td> {{ music }}</td>
+              <td>
+                <span class="float-right"> 
+                  <button class="btn btn-outline-danger mb-1 btn-sm">
+                    Remover
+                  </button>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    
+      </div>
+    </div>
+    
+</div>

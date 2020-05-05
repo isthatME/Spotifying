@@ -35,7 +35,7 @@ p{
     color: white;
 }
 .larger-text{
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bolder;
     letter-spacing: 0;
 }
@@ -53,4 +53,21 @@ p{
     text-align: center;
     color: white;
     font-size: 20px;
+}
+.playerManager {
+    padding: 10px;
+    color: white;
+    width: 300px;
+    height: 60px;
+    background-color: #1DB954;
+    border: none;
+    border-radius: 600px;
+    font-weight: bolder;
+    font-size: 17px;    
+    margin: 50px;
+    margin-left: 200px;
+    letter-spacing: 2px;
+}
+a{
+    color: white;
 }

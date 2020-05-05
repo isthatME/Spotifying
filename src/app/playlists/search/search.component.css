@@ -1,3 +1,17 @@
 input { 
     margin: 3px;
 }
+
+button {
+    background-color: #1DB954;
+    border: none;
+    color: white;
+}
+.searchBtn {
+    font: bolder;
+    border: none;
+}
+.btn-outline-danger{
+    background-color: rgb(194, 5, 5);
+    border: none;
+}

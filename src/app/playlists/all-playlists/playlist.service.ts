@@ -8,13 +8,16 @@ import { HttpClient, HttpParams } from '@angular/common/http'
 })
 export class PlaylistService {
 
-  private readonly API = `${environment.API}playlists` 
+  private readonly API = `${environment.API}` 
 
   filteredPlaylist = [] 
 
   constructor(private http: HttpClient) { }
   
   getPlaylist(){
-    return this.http.get<Playlist[]>(this.API)
+    return this.http.get<Playlist[]>(`${this.API}playlists`)
+  }
+  getPlaylistName() {
+    return this.http.get<Playlist[]>(`${this.API}users`)
   }
 }
