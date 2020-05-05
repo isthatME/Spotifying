@@ -5,16 +5,16 @@
       <option value="0"></option>
   </div>
 </div> -->
-<div *ngIf="playlistSelected == null">
-  <select *ngFor="let play of playlistName" id="select-playlist" (change)="getValue($event)"> 
-      <option value="default">Selecione uma playlist</option>
-      <option *ngFor="let name of play" >{{ name }}</option>
+<div class="selectedPlaylist" *ngIf="playlistNameSelected == null">
+  <select *ngFor="let play of playlistName" id="select-playlist" (change)="getValue($event)">
+    <option value="default">Selecione uma playlist</option>
+    <option *ngFor="let name of play">{{ name }}</option>
   </select>
 </div>
-<div class="listagem" *ngIf="playlistSelected != null">
+<div class="listagem" *ngIf="playlistNameSelected != null">
   <form id="term">
-      <input type="text" (keyup.enter)="onEnter()">
-      <button class="searchBtn" (click)="onEnter()">Pesquisar</button>
+    <input type="text" (keyup.enter)="onEnter()">
+    <button class="searchBtn" (click)="getPlaylistSelected()">Pesquisar</button>
   </form>
   <!-- <div *ngFor="let play of playlistSearched">
       <div *ngFor="let music of play.music" style="display: block;">
@@ -22,31 +22,32 @@
       </div>
   </div> -->
   <div class="card mt-3">
-      <div class="card-header">
-        <div class="float-left">
-          <h4>Musicas</h4>
-        </div>
-        <div class="float-right">
-          <button type="button" class="btn btn-primary">Nova Playlist</button>
-          {{ ' ' }}
-          <button type="button" class="btn btn-secondary">Atualizar</button>
-        </div>
+    <div class="card-header">
+      <div class="float-left">
+        <h4>Musicas</h4>
       </div>
-      <div class="card-body">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Musica</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody *ngFor="let play of playlistSearched">
-            <tr *ngFor="let music of play; let i = index" >
+      <div class="float-right">
+        <button type="button" class="btn btn-primary">Nova Playlist</button>
+        {{ ' ' }}
+        <button type="button" class="btn btn-secondary">Atualizar</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Musica</th>
+            <th></th>
+          </tr>
+        </thead>
+        <div *ngFor="let playlist of playlistSelected"  style="width:100%">
+          <tbody *ngFor="let music of playlist">
+            <tr *ngFor="let song of music; let i = index">
               <td> {{ i }}</td>
-              <td> {{ music }}</td>
+              <td >{{ song }}</td>
               <td>
-                <span class="float-right"> 
+                <span class="float-right">
                   <button class="btn btn-outline-danger mb-1 btn-sm">
                     Remover
                   </button>
@@ -54,9 +55,10 @@
               </td>
             </tr>
           </tbody>
-        </table>
-    
-      </div>
+          </div>
+      </table>
+
     </div>
-    
+  </div>
+
 </div>

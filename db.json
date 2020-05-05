@@ -63,84 +63,103 @@
       ]
     }
   ],
+
+
+
+
+
+
   "users": [
     {
       "name": "gui@gui.com",
       "email": "gui@gui.com",
       "password": "123",
-      "id": 1,
-      "playlist": [
-        {
-          "id": 0,
-          "cover": "../assets/cover/img2.png",
-          "name": "Brasil anos 80",
-          "music": [
-            {
-              "name": "Come Around Me",
-              "singer": "justin Bieber",
-              "duration": "4:24",
-              "path": "./assets/musics/Come Around Me.mp3"
-            },
-            {
-              "name": "Whatever",
-              "singer": "justin Bieber",
-              "duration": "4:24",
-              "path": "./assets/musics/Come Around Me.mp3"
-            },
-            {
-              "name": "'E.T.A",
-              "singer": "justin Bieber",
-              "duration": "3:24",
-              "path": "./assets/musics/E.T.A.mp3"
-            },
-            {
-              "name": "Confirmation",
-              "singer": "Justin bieber",
-              "duration": "2:48",
-              "path": "./assets/musics/Confirmation.mp3"
-            },
-            {
-              "name": "'Forever feat. Post Malone'",
-              "singer": "justin Bieber",
-              "duration": "3:14",
-              "path": "./assets/musics/Come Around Me.mp3"
-            }
-          ]
-        },
-        {
-          "id": 1,
-          "cover": "../assets/cover/img3.png",
-          "name": "Funk e Pop",
-          "music": [
-            {
-              "name": "Come Around Me",
-              "singer": "justin Bieber",
-              "duration": "4:24",
-              "path": "./assets/musics/Come Around Me.mp3"
-            },
-            {
-              "name": "'E.T.A",
-              "singer": "justin Bieber",
-              "duration": "3:24",
-              "path": "./assets/musics/E.T.A.mp3"
-            },
-            {
-              "name": "Confirmation",
-              "singer": "Justin bieber",
-              "duration": "2:48",
-              "path": "./assets/musics/Confirmation.mp3"
-            },
-            {
-              "name": "'Forever feat. Post Malone'",
-              "singer": "justin Bieber",
-              "duration": "3:14",
-              "path": "./assets/musics/Come Around Me.mp3"
-            }
-          ]
-        }
-      ]
+      "id": 0
     }
   ],
+  "playlist": [
+    {
+      "id": 0,
+      "userId": 0,
+      "cover": "../assets/cover/img2.png",
+      "name": "Changes"
+    },
+    {
+      "name": "E.T.A",
+      "userId": 0,
+      "playlistId": 0,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "name": "Come Around Me",
+      "userId": 0,
+      "playlistId": 0,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "name": "Confirmation",
+      "userId": 0,
+      "playlistId": 0,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "name": "Habitual",
+      "userId": 0,
+      "playlistId": 0,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "id": 1,
+      "userId": 0,
+      "cover": "../assets/cover/img2.png",
+      "name": "Funk e Pop"
+    },
+    {
+      "name": "E.T.A",
+      "userId": 0,
+      "playlistId": 1,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "name": "E.T.A",
+      "userId": 0,
+      "playlistId": 1,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "name": "E.T.A",
+      "userId": 0,
+      "playlistId": 1,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "name": "E.T.A",
+      "userId": 0,
+      "playlistId": 1,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    }
+  ],
+
+
+
+
+
   "login": [
     {
       "name": "Guilherme",

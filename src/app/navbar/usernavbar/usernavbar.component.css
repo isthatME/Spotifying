@@ -60,7 +60,11 @@ nav{
   input {
    width: 9vw;
    height: 4vh;
-   margin-top: 16px;
+   margin-top: 14px;
    border-radius: 10px 10px 10px;
    border: none;
+    
+  }
+  ::placeholder {
+    padding: 10px;
   }

@@ -1,7 +1,7 @@
+import { Playlist } from './../playlists';
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
-import { Playlist } from '../playlists';
-import { HttpClient, HttpParams } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,6 @@ export class PlaylistService {
     return this.http.get<Playlist[]>(`${this.API}playlists`)
   }
   getPlaylistName() {
-    return this.http.get<Playlist[]>(`${this.API}users`)
+    return this.http.get<any>(`${this.API}users`)
   }
 }

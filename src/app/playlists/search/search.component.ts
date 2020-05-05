@@ -1,8 +1,7 @@
+import { map, filter } from 'rxjs/operators';
 import { Playlist } from './../playlists';
-import { map } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { PlaylistService } from '../all-playlists/playlist.service';
-import { Observable } from 'rxjs';
 
 
 
@@ -14,15 +13,15 @@ import { Observable } from 'rxjs';
 export class SearchComponent implements OnInit {
 
   playlistSearched: any;
-  playlistName: any
-  playlistSelected: any = null
+  playlistName: any;
+  playlistNameSelected: any = null;
+  playlistSelected: any;
 
   constructor(private playlistService: PlaylistService) { }
 
   ngOnInit(): void {
-      this.playlistService.getPlaylistName().subscribe((data:any) => {
+    this.playlistService.getPlaylistName().subscribe((data: any) => {
       this.playlistName = data.map(e => e.playlist.map(e => e.name))
-      console.log(this.playlistName)
     })
   }
 
@@ -31,16 +30,25 @@ export class SearchComponent implements OnInit {
     this.playlistService.getPlaylist().subscribe((data: any) => {
       // filter an array of music
       this.playlistSearched = data.map(e => e.music.map(e => e.name))
-
+      console.log(this.playlistSearched)
       //  get all playlist 
-      // this.playlistSearched = data.map(e => e.music)
-     
+      // this.playlistSearched = data.map(e => e.music)     
     })
   }
-  getValue(event: any){
-    this.playlistSelected = event.target.value
+  getPlaylistSelected() {
+    this.playlistService.getPlaylistName().subscribe((data: any) => {
+      this.playlistSelected = data.map(e => e.playlist
+        .filter(e => e.name == this.playlistNameSelected)
+        .map(e => e.music
+        .map(e => e.name)))
+      console.log(this.playlistSelected)
+    })
+  }
+  getValue(event: any) {
+    this.playlistNameSelected = event.target.value
   }
 
-  
-
+  deleteSong() {
+    
+  }
 }
