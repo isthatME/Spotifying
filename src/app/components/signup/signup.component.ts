@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
       if (res.result) {
         console.log(res)
         this.signupForm.reset()
-        this.router.navigate(['log-in']);
+        this.router.navigate(['login']);
       }
     })
   }

@@ -2,6 +2,7 @@ import { Playlist } from './../playlists';
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,9 @@ export class PlaylistService {
 
   //filtra playlists do usuario 0
   //http://localhost:3000/users/0/playlistt
+
+  //filtra a primeira musica da playlist
+  //http://localhost:3000/playlist/0
 
   private readonly API = `${environment.API}` 
 
@@ -25,10 +29,16 @@ export class PlaylistService {
   getAllSongFromAPlaylist(playlistIndex: any){
     return this.http.get<any>(`${this.API}users/0/playlist?playlistId=${playlistIndex}`)
   }
-  getPlaylistName() {
+  getPlaylistReference() {
     return this.http.get<any>(`${this.API}users/0/playlistt`)
   }
 
+  delete(songId) {
+    return this.http.delete(`${this.API}playlist/${songId}`)
+  }
 
+  // addSong(){
+  //   return this.http.post(`${this.API}`)
+  // }
 
 }

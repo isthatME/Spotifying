@@ -63,37 +63,35 @@
       ]
     }
   ],
-
-
-
-
-
-
   "users": [
     {
       "name": "gui@gui.com",
       "email": "gui@gui.com",
       "password": "123",
       "id": 0
+    },
+    {
+      "name": "gui@gui.com",
+      "email": "gui@gui.com",
+      "password": "123",
+      "id": 1
     }
   ],
   "playlistt": [
     {
-      "id": 0,
-      "userId": 0,
       "cover": "../assets/cover/img2.png",
-      "name": "Changes"
+      "name": "Changes",
+      "id": 0
     },
     {
-      "id": 1,
-      "userId": 0,
       "cover": "../assets/cover/img2.png",
-      "name": "Rap"
+      "name": "Rap",
+      "id": 1
     }
   ],
-    "playlist": [
+  "playlist": [
     {
-      "songId":0,
+      "id": 0,
       "name": "E.T.A",
       "userId": 0,
       "playlistId": 0,
@@ -102,7 +100,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "songId":1,
+      "id": 1,
       "name": "Come Around Me",
       "userId": 0,
       "playlistId": 0,
@@ -111,7 +109,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "songId":2,
+      "id": 2,
       "name": "Confirmation",
       "userId": 0,
       "playlistId": 0,
@@ -120,7 +118,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "songId":3,
+      "id": 3,
       "name": "Habitual",
       "userId": 0,
       "playlistId": 0,
@@ -129,6 +127,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
+      "id": 4,
       "name": "Congratulation",
       "userId": 0,
       "playlistId": 1,
@@ -137,6 +136,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
+      "id": 5,
       "name": "Hollywood's Bleeding",
       "userId": 0,
       "playlistId": 1,
@@ -145,6 +145,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
+      "id": 6,
       "name": "Saint-Tropez",
       "userId": 0,
       "playlistId": 1,
@@ -153,6 +154,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
+      "id": 7,
       "name": "enemies",
       "userId": 0,
       "playlistId": 1,
@@ -161,11 +163,6 @@
       "path": "./assets/musics/Come Around Me.mp3"
     }
   ],
-
-
-
-
-
   "login": [
     {
       "name": "Guilherme",

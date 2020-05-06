@@ -1,29 +1,22 @@
 <app-usernavbar></app-usernavbar>
-<!-- <div class="select-playlist">
-  <div class="custom-select" style="width:200px;">
-    <select>
-      <option value="0"></option>
-  </div>
-</div> -->
 
-
-<div class="selectedPlaylist" *ngIf="playlistNameSelected == null">
-  <select id="select-playlist" (change)="getValue($event)">
+<div class="selectedPlaylist" *ngIf="playlistIndexSelected == null">
+  <select id="select-playlist" (change)="onChange($event)">
     <option value="default">Selecione uma playlist</option>
-    <option *ngFor="let name of playlistName">{{ name }}</option>
+    <option *ngFor="let name of playlistName; let i = index">{{ name }}</option>
   </select>
 </div>
 
 
-<div class="listagem" *ngIf="playlistNameSelected != null">
+<div class="listagem" *ngIf="playlistIndexSelected != null">
   <form id="term">
     <input type="text" (keyup.enter)="onEnter()">
     <button class="searchBtn" (click)="getPlaylistSelected()">Pesquisar</button>
   </form>
   <div *ngFor="let play of playlistSearched">
-      <div *ngFor="let music of play.music" style="display: block;">
-          {{ music.name }}
-      </div>
+    <div *ngFor="let music of play.music" style="display: block;">
+      {{ music.name }}
+    </div>
   </div>
   <div class="card mt-3">
     <div class="card-header">
@@ -31,7 +24,7 @@
         <h4>Musicas</h4>
       </div>
       <div class="float-right">
-        <button type="button" class="btn btn-primary">Nova Playlist</button>
+        <button type="button" class="btn btn-primary"><a routerLink="/CreatePlaylistComponent"></a> Nova Playlist</button>
         {{ ' ' }}
         <button type="button" class="btn btn-secondary">Atualizar</button>
       </div>
@@ -40,27 +33,33 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>#</th>
+            <th></th>
             <th>Musica</th>
             <th></th>
           </tr>
         </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>
-                <span class="float-right">
-                  <button class="btn btn-outline-danger mb-1 btn-sm">
-                    Remover
-                  </button>
-                </span>
-              </td>
-            </tr>
-          </tbody>
+        <tbody>
+          <tr *ngFor="let playlist of playlistSearched">
+            <td>{{ playlist.name }}</td>
+            <td></td>
+            <td>
+              <span class="float-right">
+                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(playlist)">
+                  Remover
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
       </table>
-
     </div>
   </div>
-
 </div>
+
+<!-- <ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Do you want to confirm?</p>
+    <button type="button" class="btn btn-default">Yes</button>
+    <button type="button" class="btn btn-primary">No</button>
+  </div>
+</ng-template> -->

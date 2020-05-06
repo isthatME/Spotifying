@@ -1,4 +1,6 @@
-http://localhost:3000/playlist
+ GET  http://localhost:3000/users/0/playlist?playlistId=0&name=E.T.A
+
+
 
 
 

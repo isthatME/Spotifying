@@ -18,6 +18,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { AuthInterceptor } from './shared/authconfig.interceptor';
+import { CreatePlaylistComponent } from './playlists/create-playlist/createPlaylist.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +36,15 @@ import { AuthInterceptor } from './shared/authconfig.interceptor';
     SearchComponent,
     SignupComponent,
     UserProfileComponent,
-    SigninComponent
+    SigninComponent,
+    CreatePlaylistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     {

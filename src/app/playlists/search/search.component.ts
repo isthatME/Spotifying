@@ -1,6 +1,6 @@
-import { map, filter } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Playlist } from './../playlists';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ɵConsole } from '@angular/core';
 import { PlaylistService } from '../all-playlists/playlist.service';
 
 
@@ -13,54 +13,47 @@ import { PlaylistService } from '../all-playlists/playlist.service';
 export class SearchComponent implements OnInit {
   playlistName: any;
   playlistSearched: any;
-  playlistNameSelected: any = null
-  index: any = null
+  playlistIndexSelected: any = null
   playlistSelected: any;
+  playlistIdSelected: any;
+
+  song:any
+
 
   constructor(private playlistService: PlaylistService) { }
 
   ngOnInit(): void {
-    this.playlistService.getPlaylistName().subscribe((data: any) => {
+    this.playlistService.getPlaylistReference().subscribe((data: any) => {
       this.playlistName = data.map(e => e.name)
+      this.playlistIdSelected = data.map(e => e.id)      
     })
   }
   onEnter() {
-    // return and object with all playlist 
-    this.playlistService.getPlaylist().subscribe((data: any) => {
-      // filter an array of music
-      this.playlistSearched = data.map(e => e.music.map(e => e.name))
-      console.log(this.playlistSearched)
-      //  get all playlist 
-      // this.playlistSearched = data.map(e => e.music)     
-    })
   }
-
-
-
-
-
-
-
-
-
-
-
 
   getPlaylistSelected() {
-    // this.playlistService.getPlaylistName().subscribe((data: any) => {
-    //   this.playlistSelected = data.map(e => e.playlist
-    //     .filter(e => e.name == this.playlistNameSelected)
-    //     .map(e => e.music
-    //     .map(e => e.name)))
-    //   console.log(this.playlistSelected)
-    // })
+    this.playlistService.getAllSongFromAPlaylist(this.playlistIndexSelected).subscribe((data: any) => {
+      this.playlistSearched = data
+      console.log(data.map(e => e.id))
+    })
 
   }
-  getValue(event: any) {
-    this.playlistNameSelected = event.target.value
-  }
+  onChange(event: any) {
+    this.playlistIndexSelected = event.target["selectedIndex"] - 1
+    this.playlistIdSelected = event.target["selectedIndex"] - 1
 
-  deleteSong() {
     
+  }
+
+  onDelete(playlist) {
+    this.playlistService.delete(playlist.id)
+    .subscribe(
+      success => {
+        console.log('sucesso ao remover curso')
+        this.getPlaylistSelected()        
+      },
+      error => console.log('erro ao remover curso')
+    )
+
   }
 }
