@@ -10,12 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllPlaylistsComponent implements OnInit {
   playlist$: Playlist[];
-  currentUser: any;
-  playlistSearched: any;
-  name: any;
+
   constructor(
-    private pl: PlaylistService,
-    private LoginService: LoginService
+    private pl: PlaylistService
   ) { }
 
   ngOnInit(): void {

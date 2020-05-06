@@ -7,17 +7,28 @@ import { HttpClient } from '@angular/common/http'
   providedIn: 'root'
 })
 export class PlaylistService {
+  // filtra musicas da playlist de indice 1 (final da query) do usuário 0 
+  //http://localhost:3000/users/0/playlist?playlistId=1
+
+  //filtra playlists do usuario 0
+  //http://localhost:3000/users/0/playlistt
 
   private readonly API = `${environment.API}` 
 
-  filteredPlaylist = [] 
 
   constructor(private http: HttpClient) { }
   
   getPlaylist(){
     return this.http.get<Playlist[]>(`${this.API}playlists`)
   }
-  getPlaylistName() {
-    return this.http.get<any>(`${this.API}users`)
+
+  getAllSongFromAPlaylist(playlistIndex: any){
+    return this.http.get<any>(`${this.API}users/0/playlist?playlistId=${playlistIndex}`)
   }
+  getPlaylistName() {
+    return this.http.get<any>(`${this.API}users/0/playlistt`)
+  }
+
+
+
 }

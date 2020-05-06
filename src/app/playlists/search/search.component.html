@@ -5,22 +5,26 @@
       <option value="0"></option>
   </div>
 </div> -->
+
+
 <div class="selectedPlaylist" *ngIf="playlistNameSelected == null">
-  <select *ngFor="let play of playlistName" id="select-playlist" (change)="getValue($event)">
+  <select id="select-playlist" (change)="getValue($event)">
     <option value="default">Selecione uma playlist</option>
-    <option *ngFor="let name of play">{{ name }}</option>
+    <option *ngFor="let name of playlistName">{{ name }}</option>
   </select>
 </div>
+
+
 <div class="listagem" *ngIf="playlistNameSelected != null">
   <form id="term">
     <input type="text" (keyup.enter)="onEnter()">
     <button class="searchBtn" (click)="getPlaylistSelected()">Pesquisar</button>
   </form>
-  <!-- <div *ngFor="let play of playlistSearched">
+  <div *ngFor="let play of playlistSearched">
       <div *ngFor="let music of play.music" style="display: block;">
           {{ music.name }}
       </div>
-  </div> -->
+  </div>
   <div class="card mt-3">
     <div class="card-header">
       <div class="float-left">
@@ -41,11 +45,10 @@
             <th></th>
           </tr>
         </thead>
-        <div *ngFor="let playlist of playlistSelected"  style="width:100%">
-          <tbody *ngFor="let music of playlist">
-            <tr *ngFor="let song of music; let i = index">
-              <td> {{ i }}</td>
-              <td >{{ song }}</td>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
               <td>
                 <span class="float-right">
                   <button class="btn btn-outline-danger mb-1 btn-sm">
@@ -55,7 +58,6 @@
               </td>
             </tr>
           </tbody>
-          </div>
       </table>
 
     </div>

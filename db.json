@@ -77,7 +77,7 @@
       "id": 0
     }
   ],
-  "playlist": [
+  "playlistt": [
     {
       "id": 0,
       "userId": 0,
@@ -85,6 +85,15 @@
       "name": "Changes"
     },
     {
+      "id": 1,
+      "userId": 0,
+      "cover": "../assets/cover/img2.png",
+      "name": "Rap"
+    }
+  ],
+    "playlist": [
+    {
+      "songId":0,
       "name": "E.T.A",
       "userId": 0,
       "playlistId": 0,
@@ -93,6 +102,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
+      "songId":1,
       "name": "Come Around Me",
       "userId": 0,
       "playlistId": 0,
@@ -101,6 +111,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
+      "songId":2,
       "name": "Confirmation",
       "userId": 0,
       "playlistId": 0,
@@ -109,6 +120,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
+      "songId":3,
       "name": "Habitual",
       "userId": 0,
       "playlistId": 0,
@@ -117,13 +129,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "id": 1,
-      "userId": 0,
-      "cover": "../assets/cover/img2.png",
-      "name": "Funk e Pop"
-    },
-    {
-      "name": "E.T.A",
+      "name": "Congratulation",
       "userId": 0,
       "playlistId": 1,
       "singer": "justin Bieber",
@@ -131,7 +137,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "name": "E.T.A",
+      "name": "Hollywood's Bleeding",
       "userId": 0,
       "playlistId": 1,
       "singer": "justin Bieber",
@@ -139,7 +145,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "name": "E.T.A",
+      "name": "Saint-Tropez",
       "userId": 0,
       "playlistId": 1,
       "singer": "justin Bieber",
@@ -147,7 +153,7 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "name": "E.T.A",
+      "name": "enemies",
       "userId": 0,
       "playlistId": 1,
       "singer": "justin Bieber",
