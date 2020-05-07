@@ -87,11 +87,6 @@
       "cover": "../assets/cover/img2.png",
       "name": "Rap",
       "id": 1
-    },
-    {
-      "cover": "../assets/cover/img1.jpg",
-      "name": "teste",
-      "id": 2
     }
   ],
   "playlist": [
@@ -121,6 +116,42 @@
       "singer": "justin Bieber",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "id": 4,
+      "name": "Congratulation",
+      "userId": 0,
+      "playlistId": 1,
+      "singer": "Post Malone",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "id": 5,
+      "name": "Hollywood's Bleeding",
+      "userId": 0,
+      "playlistId": 1,
+      "singer": "Post Malone",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "id": 6,
+      "name": "Thunderclouds",
+      "userId": 0,
+      "playlistId": 1,
+      "singer": "Sia",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "id": 7,
+      "name": " In Too Deep",
+      "userId": 0,
+      "playlistId": 1,
+      "singer": "Eminem",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
     }
   ],
   "login": [
@@ -135,6 +166,12 @@
       "email": "guilherme",
       "password": "123",
       "id": 2
+    },
+    {
+      "name": "Guilherme",
+      "email": "guilherme_@123.com",
+      "password": "123",
+      "id": 3
     }
   ]
 }

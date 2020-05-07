@@ -16,7 +16,6 @@ export class LoginService {
    }
 
    login(user: User){
-     this.currentUser = user
      return this.http.post<User>(this.API, user)
    }
    isLoggedIn(auth: number): boolean {

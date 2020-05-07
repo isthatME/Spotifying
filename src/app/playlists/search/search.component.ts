@@ -1,3 +1,4 @@
+import { map } from "rxjs/operators";
 import { Component, OnInit } from "@angular/core";
 import { PlaylistService } from "../all-playlists/playlist.service";
 
@@ -16,6 +17,8 @@ export class SearchComponent implements OnInit {
   playlistIdSelected: any;
   //escuta a mudança de playlist para que o botão varie entre adicionar e remover
   isRemovable: boolean = false;
+  //filtro pra pegar todos os nome das músicas da playlist selecionada
+  searchedTerm: string;
 
   playlistSelected: any;
 
@@ -24,13 +27,13 @@ export class SearchComponent implements OnInit {
   //nos fornece qual o id da musica a ser adicionada
   nextIndex: any;
 
-  constructor(private playlistService: PlaylistService) {}
+  constructor(private playlistService: PlaylistService) { }
 
   ngOnInit(): void {
     //return the name and index of the current playlist
     this.playlistService.getPlaylistReference().subscribe((data: any) => {
-      this.playlistName = data.map((e) => e.name);
-      this.playlistIdSelected = data.map((e) => e.id);
+      this.playlistName = data.map(e => e.name);
+      this.playlistIdSelected = data.map(e => e.id);
     });
 
     if (this.playlistIndexSelected == -1) {
@@ -46,10 +49,12 @@ export class SearchComponent implements OnInit {
         .getAllSongsFromAPlaylist(this.playlistIndexSelected)
         .subscribe((data: any) => {
           this.playlistSearched = data;
+          this.searchedTerm = data.map(e => e.name);
         });
     } else {
       this.playlistService.getAllSongsFromAnUser().subscribe((data: any) => {
         this.playlistSearched = data;
+        this.searchedTerm = data.map(e => e.name);
       });
     }
   }
@@ -63,7 +68,7 @@ export class SearchComponent implements OnInit {
 
   getNextIndex() {
     this.playlistService.getAllSongsFromAnUser().subscribe((data: any) => {
-      this.nextIndex = data.map((e) => e.id).length + 1;
+      this.nextIndex = data.map(e => e.id).length + 1;
     });
   }
 

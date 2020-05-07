@@ -19,6 +19,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { SigninComponent } from './components/signin/signin.component';
 import { AuthInterceptor } from './shared/authconfig.interceptor';
 import { CreatePlaylistComponent } from './playlists/create-playlist/createPlaylist.component';
+import { FilterPipe } from './playlists/search/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CreatePlaylistComponent } from './playlists/create-playlist/createPlayl
     UserProfileComponent,
     SigninComponent,
     CreatePlaylistComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

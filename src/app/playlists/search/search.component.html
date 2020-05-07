@@ -9,10 +9,10 @@
 </div>
 
 <div class="listagem">
-  <form id="term">
-    <input type="text" />
+  <div id="term">
+    <input [(ngModel)]="searchedTerm" type="text"/>
     <button class="searchBtn" (click)="getPlaylistSelected()">Pesquisar</button>
-  </form>
+  </div>
   <div *ngFor="let play of playlistSearched">
     <div *ngFor="let music of play.music" style="display: block;">
       {{ music.name }}
@@ -45,7 +45,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let playlist of playlistSearched" >
+          <tr *ngFor="let playlist of playlistSearched | filter:searchedTerm" >
             <td></td>
             <td>{{ playlist.name }}</td>
             <td>{{ playlist.singer }}</td>
