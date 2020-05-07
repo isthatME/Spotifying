@@ -26,17 +26,22 @@ export class PlaylistService {
     return this.http.get<Playlist[]>(`${this.API}playlists`)
   }
 
-  getAllSongFromAPlaylist(playlistIndex: any){
+  getAllSongsFromAPlaylist(playlistIndex: any){
     return this.http.get<any>(`${this.API}users/0/playlist?playlistId=${playlistIndex}`)
   }
   getPlaylistReference() {
-    return this.http.get<any>(`${this.API}users/0/playlistt`)
+    return this.http.get<any>(`${this.API}playlistt`)
   }
 
   delete(songId) {
     return this.http.delete(`${this.API}playlist/${songId}`)
   }
-
+  getAllSongsFromAnUser(){
+    return this.http.get(`${this.API}playlist`)
+  }
+  createPlaylist(playlist){
+    return this.http.post(`${this.API}playlistt`, playlist)
+  }
   // addSong(){
   //   return this.http.post(`${this.API}`)
   // }

@@ -1,16 +1,16 @@
 <app-usernavbar></app-usernavbar>
 
-<div class="selectedPlaylist" *ngIf="playlistIndexSelected == null">
+
+<div class="selectedPlaylist">
   <select id="select-playlist" (change)="onChange($event)">
-    <option value="default">Selecione uma playlist</option>
+    <option value="default">Todas as músicas</option>
     <option *ngFor="let name of playlistName; let i = index">{{ name }}</option>
   </select>
 </div>
 
-
-<div class="listagem" *ngIf="playlistIndexSelected != null">
+<div class="listagem">
   <form id="term">
-    <input type="text" (keyup.enter)="onEnter()">
+    <input type="text" />
     <button class="searchBtn" (click)="getPlaylistSelected()">Pesquisar</button>
   </form>
   <div *ngFor="let play of playlistSearched">
@@ -24,9 +24,7 @@
         <h4>Musicas</h4>
       </div>
       <div class="float-right">
-        <button type="button" class="btn btn-primary"><a routerLink="/CreatePlaylistComponent"></a> Nova Playlist</button>
-        {{ ' ' }}
-        <button type="button" class="btn btn-secondary">Atualizar</button>
+        <button type="button" class="btn btn-primary" routerLink="/createPlaylist"><a></a> Nova Playlist</button>
       </div>
     </div>
     <div class="card-body">
@@ -35,18 +33,23 @@
           <tr>
             <th></th>
             <th>Musica</th>
+            <th>Cantor</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let playlist of playlistSearched">
-            <td>{{ playlist.name }}</td>
             <td></td>
+            <td>{{ playlist.name }}</td>
+            <td>{{ playlist.singer }}</td>
             <td>
               <span class="float-right">
-                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(playlist)">
+                <button *ngIf="playlistIndexSelected != -1" class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(playlist)">
                   Remover
                 </button>
+                <button *ngIf="playlistIndexSelected == -1" class="btn btn-primary" (click)="addSong(song)"> 
+                  Adicionar
+                </button>  
               </span>
             </td>
           </tr>

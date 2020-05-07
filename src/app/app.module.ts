@@ -37,7 +37,7 @@ import { CreatePlaylistComponent } from './playlists/create-playlist/createPlayl
     SignupComponent,
     UserProfileComponent,
     SigninComponent,
-    CreatePlaylistComponent
+    CreatePlaylistComponent,
   ],
   imports: [
     BrowserModule,
