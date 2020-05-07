@@ -34,22 +34,30 @@
             <th></th>
             <th>Musica</th>
             <th>Cantor</th>
-            <th></th>
+            <th>
+              <span class="float-right" *ngIf="playlistIndexSelected == -1">
+                <select id="select-playlist" (change)="playlistOnChange($event)">
+                  <option *ngIf="playlistIndexSelected != -1">Todas as músicas</option>
+                  <option *ngFor="let name of playlistName; let i = index" >{{ name }}</option>
+                </select>
+              </span>
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let playlist of playlistSearched">
+          <tr *ngFor="let playlist of playlistSearched" >
             <td></td>
             <td>{{ playlist.name }}</td>
             <td>{{ playlist.singer }}</td>
             <td>
               <span class="float-right">
-                <button *ngIf="playlistIndexSelected != -1" class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(playlist)">
+                <button *ngIf="playlistIndexSelected != -1" class="btn btn-outline-danger mb-1 btn-sm"
+                  (click)="onDelete(playlist)">
                   Remover
                 </button>
-                <button *ngIf="playlistIndexSelected == -1" class="btn btn-primary" (click)="addSong(song)"> 
+                <button *ngIf="playlistIndexSelected == -1" class="btn btn-primary" (click)="addSong(playlist)">
                   Adicionar
-                </button>  
+                </button>
               </span>
             </td>
           </tr>

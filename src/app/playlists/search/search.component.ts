@@ -15,9 +15,14 @@ export class SearchComponent implements OnInit {
   //id da playlist selecionada
   playlistIdSelected: any;
   //escuta a mudança de playlist para que o botão varie entre adicionar e remover
-  isRemovable: boolean = false
+  isRemovable: boolean = false;
 
-  song: any;
+  playlistSelected: any;
+
+  songSelectedToBeAdd: any;
+
+  //nos fornece qual o id da musica a ser adicionada
+  nextIndex: any;
 
   constructor(private playlistService: PlaylistService) {}
 
@@ -27,6 +32,10 @@ export class SearchComponent implements OnInit {
       this.playlistName = data.map((e) => e.name);
       this.playlistIdSelected = data.map((e) => e.id);
     });
+
+    if (this.playlistIndexSelected == -1) {
+      this.getPlaylistSelected();
+    }
   }
 
   //devolve todos os objetos das musicas de uma playlist com nome declarado em playlistName (obtido no select)
@@ -49,6 +58,13 @@ export class SearchComponent implements OnInit {
   onChange(event: any) {
     this.playlistIdSelected,
       (this.playlistIndexSelected = event.target["selectedIndex"] - 1);
+    this.getPlaylistSelected();
+  }
+
+  getNextIndex() {
+    this.playlistService.getAllSongsFromAnUser().subscribe((data: any) => {
+      this.nextIndex = data.map((e) => e.id).length + 1;
+    });
   }
 
   //deleta a musica de uma playlist pré=selecionada, baseada no id ( que é pego na iteração do ngFor
@@ -56,15 +72,26 @@ export class SearchComponent implements OnInit {
   onDelete(playlist) {
     this.playlistService.delete(playlist.id).subscribe(
       (success) => {
-        console.log("sucesso ao remover curso");
+        console.log("sucesso ao remover música");
         this.getPlaylistSelected();
       },
-      (error) => console.log("erro ao remover curso")
+      (error) => console.log("erro ao remover música")
     );
   }
 
-  
-  addSong(song) {
+  playlistOnChange(playlist) {
+    this.playlistSelected = playlist.target["selectedIndex"];
+  }
 
+  addSong(song) {
+    song.playlistId = this.playlistSelected;
+    song.id = this.nextIndex;
+    this.playlistService.addSong(song).subscribe(
+      (success) => {
+        console.log("sucesso ao adicionar música");
+        this.getNextIndex();
+      },
+      (error) => console.log("erro ao adicionar música")
+    );
   }
 }

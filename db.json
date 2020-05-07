@@ -90,7 +90,7 @@
     },
     {
       "cover": "../assets/cover/img1.jpg",
-      "name": "Funk e Pop",
+      "name": "teste",
       "id": 2
     }
   ],
@@ -119,42 +119,6 @@
       "userId": 0,
       "playlistId": 0,
       "singer": "justin Bieber",
-      "duration": "4:24",
-      "path": "./assets/musics/Come Around Me.mp3"
-    },
-    {
-      "id": 4,
-      "name": "Congratulation",
-      "userId": 0,
-      "playlistId": 1,
-      "singer": "Post Malone",
-      "duration": "4:24",
-      "path": "./assets/musics/Come Around Me.mp3"
-    },
-    {
-      "id": 5,
-      "name": "Hollywood's Bleeding",
-      "userId": 0,
-      "playlistId": 1,
-      "singer": "Post Malone",
-      "duration": "4:24",
-      "path": "./assets/musics/Come Around Me.mp3"
-    },
-    {
-      "id": 6,
-      "name": "Saint-Tropez",
-      "userId": 0,
-      "playlistId": 1,
-      "singer": "Post Malone",
-      "duration": "4:24",
-      "path": "./assets/musics/Come Around Me.mp3"
-    },
-    {
-      "id": 7,
-      "name": "enemies",
-      "userId": 0,
-      "playlistId": 1,
-      "singer": "Post Malone",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
     }
