@@ -1,7 +1,7 @@
 import { Playlist } from './../playlists';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { take, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +25,8 @@ export class PlaylistService {
     return this.http.get<Playlist[]>(`${this.API}playlists`)
   }
   
-  getAllSongsFromAPlaylist(playlistIndex: any){
-    return this.http.get<any>(`${this.API}users/0/musics?playlistId=${playlistIndex}`).pipe(
+  getAllSongsFromAPlaylist(playlistName: any){
+    return this.http.get<any>(`${this.API}musics?playlistName=${playlistName}`).pipe(
       tap(e => console.log(e))
     )
   }

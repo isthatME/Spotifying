@@ -94,7 +94,7 @@
       "id": 1,
       "name": "Come Around Me",
       "userId": 0,
-      "playlistId": 0,
+      "playlistName": "Changes",
       "singer": "justin Bieber",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
@@ -103,7 +103,7 @@
       "id": 2,
       "name": "Confirmation",
       "userId": 0,
-      "playlistId": 0,
+      "playlistName": "Changes",
       "singer": "justin Bieber",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
@@ -112,7 +112,7 @@
       "id": 3,
       "name": "Habitual",
       "userId": 0,
-      "playlistId": 0,
+      "playlistName": "Changes",
       "singer": "justin Bieber",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
@@ -121,7 +121,7 @@
       "id": 4,
       "name": "Congratulation",
       "userId": 0,
-      "playlistId": 1,
+      "playlistName": "Rap",
       "singer": "Post Malone",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
@@ -130,7 +130,7 @@
       "id": 5,
       "name": "Hollywood's Bleeding",
       "userId": 0,
-      "playlistId": 1,
+      "playlistName": "Rap",
       "singer": "Post Malone",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
@@ -139,7 +139,7 @@
       "id": 6,
       "name": "Thunderclouds",
       "userId": 0,
-      "playlistId": 1,
+      "playlistName": "Rap",
       "singer": "Sia",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
@@ -148,7 +148,7 @@
       "id": 7,
       "name": " In Too Deep",
       "userId": 0,
-      "playlistId": 1,
+      "playlistName": "Rap",
       "singer": "Eminem",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"

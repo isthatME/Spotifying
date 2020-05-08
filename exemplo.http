@@ -1,4 +1,4 @@
- GET  http://localhost:3000/users/0/playlist?playlistId=0&name=E.T.A
+ GET   http://localhost:3000/musics?name=In
 
 
 

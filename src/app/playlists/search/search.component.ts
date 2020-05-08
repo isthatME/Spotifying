@@ -1,4 +1,3 @@
-import { map } from "rxjs/operators";
 import { Component, OnInit } from "@angular/core";
 import { PlaylistService } from "../all-playlists/playlist.service";
 
@@ -20,7 +19,9 @@ export class SearchComponent implements OnInit {
   //filtro pra pegar todos os nome das músicas da playlist selecionada
   searchedTerm: string;
 
-  searchedT:string
+  searchedT: string
+
+  currentPlaylist: any;
 
 
   playlistSelected: any;
@@ -36,10 +37,9 @@ export class SearchComponent implements OnInit {
     //return the name and index of the current playlist
     this.playlistService.getPlaylistReference().subscribe((data: any) => {
       this.playlistName = data.map(e => e.name);
-      console.log(this.playlistName)
       this.playlistIdSelected = data.map(e => e.id);
     });
-    
+
     if (this.playlistIndexSelected == -1) {
       this.getPlaylistSelected();
     }
@@ -50,7 +50,7 @@ export class SearchComponent implements OnInit {
     this.isRemovable = true;
     if (this.playlistIndexSelected != -1) {
       this.playlistService
-        .getAllSongsFromAPlaylist(this.playlistIndexSelected)
+        .getAllSongsFromAPlaylist(this.currentPlaylist)
         .subscribe((data: any) => {
           this.playlistSearched = data;
         });
@@ -64,7 +64,8 @@ export class SearchComponent implements OnInit {
   // escuta o evento do select e guarda o id nas respectivas variáveis
   onChange(event: any) {
     this.playlistIdSelected,
-      (this.playlistIndexSelected = event.target["selectedIndex"] - 1);
+    this.playlistIndexSelected = event.target["selectedIndex"] - 1;
+    this.currentPlaylist = event.target.value
     this.getPlaylistSelected();
   }
 
@@ -76,9 +77,8 @@ export class SearchComponent implements OnInit {
 
   //deleta a musica de uma playlist pré=selecionada, baseada no id ( que é pego na iteração do ngFor
   //no html deste componente)
-  onDelete(playlist) {
-    console.log(playlist)
-    this.playlistService.delete(playlist.id).subscribe(
+  onDelete(song) {
+    this.playlistService.delete(song.id).subscribe(
       (success) => {
         console.log("sucesso ao remover música");
         this.getPlaylistSelected();
@@ -88,11 +88,11 @@ export class SearchComponent implements OnInit {
   }
 
   playlistOnChange(playlist) {
-    this.playlistSelected = playlist.target["selectedIndex"];
+    this.currentPlaylist = playlist.target.value
   }
 
   addSong(song) {
-    song.playlistId = this.playlistSelected;
+    song.playlistName = this.currentPlaylist;
     song.id = this.nextIndex;
     this.playlistService.addSong(song).subscribe(
       (success) => {
