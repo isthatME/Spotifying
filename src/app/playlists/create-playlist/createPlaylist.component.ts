@@ -16,9 +16,9 @@ export class CreatePlaylistComponent implements OnInit {
     private playlistService: PlaylistService,
     private fb: FormBuilder,
     private router: Router
-  ) {}
+  ) { }
 
-    
+
   //dados do da playlist, com capa e id tendo valores estáticos
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -31,17 +31,19 @@ export class CreatePlaylistComponent implements OnInit {
 
   //cria a playlist
   create(form) {
-    this.playlistService.createPlaylist(form.value).subscribe(
-      (succes) => {
-        console.log("Playlist criada com sucesso");
-        this.router.navigate(["/search"]);
-      },
-      (error) => {
-        console.log(
-          "Erro ao criar sua playlist, verifique os parametros e tente novamente"
-        );
-        this.form.reset();
-      }
-    );
+    if (form.valid) {
+      this.playlistService.createPlaylist(form.value).subscribe(
+        (succes) => {
+          console.log("Playlist criada com sucesso");
+          this.router.navigate(["/search"]);
+        },
+        (error) => {
+          console.log(
+            "Erro ao criar sua playlist, verifique os parametros e tente novamente"
+          );
+          this.form.reset();
+        }
+      );
+    }
   }
 }

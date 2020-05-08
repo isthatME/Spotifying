@@ -10,7 +10,7 @@
 
 <div class="listagem">
   <div id="term">
-    <input [(ngModel)]="searchedTerm" type="text"/>
+    <input [(ngModel)]="searchedTerm" type="text" value=""/>
     <button class="searchBtn" (click)="getPlaylistSelected()">Pesquisar</button>
   </div>
   <div *ngFor="let play of playlistSearched">
@@ -24,7 +24,7 @@
         <h4>Musicas</h4>
       </div>
       <div class="float-right">
-        <button type="button" class="btn btn-primary" routerLink="/createPlaylist"><a></a> Nova Playlist</button>
+        <button type="button" id="nova-playlist" class="btn btn-primary" routerLink="/createPlaylist"><a></a> Nova Playlist</button>
       </div>
     </div>
     <div class="card-body">

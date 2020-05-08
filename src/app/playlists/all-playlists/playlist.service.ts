@@ -1,8 +1,7 @@
 import { Playlist } from './../playlists';
-import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { take } from 'rxjs/operators';
+import { take, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,7 @@ export class PlaylistService {
   //filtra a primeira musica da playlist
   //http://localhost:3000/playlist/0
 
-  private readonly API = `${environment.API}` 
+  private readonly API = 'http://localhost:3000/' 
 
 
   constructor(private http: HttpClient) { }
@@ -25,29 +24,31 @@ export class PlaylistService {
   getPlaylist(){
     return this.http.get<Playlist[]>(`${this.API}playlists`)
   }
-
+  
   getAllSongsFromAPlaylist(playlistIndex: any){
-    return this.http.get<any>(`${this.API}users/0/playlist?playlistId=${playlistIndex}`)
+    return this.http.get<any>(`${this.API}users/0/musics?playlistId=${playlistIndex}`).pipe(
+      tap(e => console.log(e))
+    )
   }
   
   getPlaylistReference() {
-    return this.http.get<any>(`${this.API}playlistt`)
+    return this.http.get<any>(`${this.API}playlist`)
   }
 
   delete(songId) {
-    return this.http.delete(`${this.API}playlist/${songId}`)
+    return this.http.delete(`${this.API}musics/${songId}`)
   }
 
   getAllSongsFromAnUser(){
-    return this.http.get(`${this.API}playlist`)
+    return this.http.get(`${this.API}musics`)
   }
 
   createPlaylist(playlist){
-    return this.http.post(`${this.API}playlistt`, playlist)
+    return this.http.post(`${this.API}playlist`, playlist)
   }
 
   addSong(song){
-    return this.http.post(`${this.API}playlist`,song)
+    return this.http.post(`${this.API}musics`,song)
   }
 
 }

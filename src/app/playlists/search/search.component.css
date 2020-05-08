@@ -23,3 +23,9 @@ button {
     
 
 }
+#nova-playlist{
+    background-color: rgb(13, 54, 28);    
+}
+#nova-playlist:hover {
+    background-color:  rgb(24, 95, 50);
+}

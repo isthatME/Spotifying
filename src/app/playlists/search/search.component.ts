@@ -20,6 +20,9 @@ export class SearchComponent implements OnInit {
   //filtro pra pegar todos os nome das músicas da playlist selecionada
   searchedTerm: string;
 
+  searchedT:string
+
+
   playlistSelected: any;
 
   songSelectedToBeAdd: any;
@@ -33,9 +36,10 @@ export class SearchComponent implements OnInit {
     //return the name and index of the current playlist
     this.playlistService.getPlaylistReference().subscribe((data: any) => {
       this.playlistName = data.map(e => e.name);
+      console.log(this.playlistName)
       this.playlistIdSelected = data.map(e => e.id);
     });
-
+    
     if (this.playlistIndexSelected == -1) {
       this.getPlaylistSelected();
     }
@@ -49,12 +53,10 @@ export class SearchComponent implements OnInit {
         .getAllSongsFromAPlaylist(this.playlistIndexSelected)
         .subscribe((data: any) => {
           this.playlistSearched = data;
-          this.searchedTerm = data.map(e => e.name);
         });
     } else {
       this.playlistService.getAllSongsFromAnUser().subscribe((data: any) => {
         this.playlistSearched = data;
-        this.searchedTerm = data.map(e => e.name);
       });
     }
   }
@@ -75,6 +77,7 @@ export class SearchComponent implements OnInit {
   //deleta a musica de uma playlist pré=selecionada, baseada no id ( que é pego na iteração do ngFor
   //no html deste componente)
   onDelete(playlist) {
+    console.log(playlist)
     this.playlistService.delete(playlist.id).subscribe(
       (success) => {
         console.log("sucesso ao remover música");

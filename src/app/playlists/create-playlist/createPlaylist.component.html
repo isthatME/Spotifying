@@ -1,13 +1,16 @@
-<form [formGroup]="form">
-  <div class="create-input">
-    <div class="inputBox">
-      <div class="contentSpacing">
-        <h4 class="inputBox-label">Nome da playlist</h4>
-        <input type="text" class="inputBox-input" placeholder="Nova playlist" formControlName="name"/>
+  <div class="input-box">
+    <h1>Agora daremos um nome a sua playlist</h1>
+    <form [formGroup]="form">
+      <div class="create-input">
+        <div class="inputBox">
+          <div class="contentSpacing">
+            <h4 class="inputBox-label">Nome da playlist</h4>
+            <input type="text" class="inputBox-input" placeholder="Nova playlist" formControlName="name"/>
+          </div>
+        </div>
       </div>
+    </form>
+    <div class="btn-create">
+      <div class="create-btn"><button class="" type="button" (click)="create(form)">CRIAR</button></div>
     </div>
   </div>
-  <div class="btn-create">
-    <div class="create-btn"><button class="" type="button" (click)="create(form)">CRIAR</button></div>
-  </div>
-</form>

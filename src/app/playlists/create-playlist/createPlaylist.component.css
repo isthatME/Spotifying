@@ -1,0 +1,54 @@
+body,html{
+    box-sizing: border-box;
+}
+.all-input{
+    background-color: black;
+    height: 69vh;
+    color: white;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.input-box{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ background-color: #282828;
+ color: white;
+}
+form {
+    display: flex;
+    justify-content: center;
+  
+}
+.create-input{
+    margin-top: 30vh;
+}
+.inputBox-input{
+    color: white;
+    line-height: 30px;
+    border: none;
+    background-color: transparent;
+}
+button{
+    background-color: rgb(20, 141, 62);
+    color: white;
+    border: none;
+    font-weight: bolder;
+    border-radius: 500px;
+    width: 200px;
+    padding: 5px;
+
+}
+button:hover {
+    background-color: rgb(50, 207, 105);
+}
+.create-btn{
+    display: flex;
+    justify-content: center;  
+    margin-top: 2vh; 
+    font-size: 14px;
+    margin-bottom: 50px;
+}
