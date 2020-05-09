@@ -32,8 +32,68 @@
       ]
     },
     {
+      "id": 1,
+      "cover": "../assets/cover/img2.png",
+      "name": "Trap",
+      "music": [
+        {
+          "name": "Come Around Me",
+          "singer": "justin Bieber",
+          "duration": "4:24",
+          "path": "./assets/musics/Come Around Me.mp3"
+        },
+        {
+          "name": "'E.T.A",
+          "singer": "justin Bieber",
+          "duration": "3:24",
+          "path": "./assets/musics/E.T.A.mp3"
+        },
+        {
+          "name": "Confirmation",
+          "singer": "Justin bieber",
+          "duration": "2:48",
+          "path": "./assets/musics/Confirmation.mp3"
+        },
+        {
+          "name": "'Forever feat. Post Malone'",
+          "singer": "justin Bieber",
+          "duration": "3:14",
+          "path": "./assets/musics/Come Around Me.mp3"
+        }
+      ]
+    },{
       "id": 2,
       "cover": "../assets/cover/img4.png",
+      "name": "Trap",
+      "music": [
+        {
+          "name": "Come Around Me",
+          "singer": "justin Bieber",
+          "duration": "4:24",
+          "path": "./assets/musics/Come Around Me.mp3"
+        },
+        {
+          "name": "'E.T.A",
+          "singer": "justin Bieber",
+          "duration": "3:24",
+          "path": "./assets/musics/E.T.A.mp3"
+        },
+        {
+          "name": "Confirmation",
+          "singer": "Justin bieber",
+          "duration": "2:48",
+          "path": "./assets/musics/Confirmation.mp3"
+        },
+        {
+          "name": "'Forever feat. Post Malone'",
+          "singer": "justin Bieber",
+          "duration": "3:14",
+          "path": "./assets/musics/Come Around Me.mp3"
+        }
+      ]
+    },{
+      "id": 3,
+      "cover": "../assets/cover/img3.png",
       "name": "Trap",
       "music": [
         {
@@ -69,17 +129,11 @@
       "email": "gui@gui.com",
       "password": "123",
       "id": 0
-    },
-    {
-      "name": "gui@gui.com",
-      "email": "gui@gui.com",
-      "password": "123",
-      "id": 1
     }
   ],
   "playlist": [
     {
-      "cover": "../assets/cover/img2.png",
+      "cover": "../assets/cover/img1.jpg",
       "name": "Changes",
       "id": 0
     },
@@ -87,6 +141,15 @@
       "cover": "../assets/cover/img2.png",
       "name": "Rap",
       "id": 1
+    }, 
+    {
+      "cover": "../assets/cover/img3.png",
+      "name": "Rock e Pop",
+      "id": 2
+    }, {
+      "cover": "../assets/cover/img4.png",
+      "name": "Whatever",
+      "id": 3
     }
   ],
   "musics": [
@@ -152,6 +215,15 @@
       "singer": "Eminem",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
+      "name": "Come Around Me",
+      "userId": 0,
+      "playlistName": "Whatever",
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3",
+      "id": 8
     }
   ],
   "login": [
@@ -160,18 +232,6 @@
       "email": "123",
       "password": "123",
       "id": 1
-    },
-    {
-      "name": "Guilherme",
-      "email": "guilherme",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "name": "Guilherme",
-      "email": "guilherme_@123.com",
-      "password": "123",
-      "id": 3
     }
   ]
 }

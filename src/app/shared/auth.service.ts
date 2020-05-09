@@ -34,9 +34,11 @@ export class AuthService {
     return this.http.post<any>(`${this.endpoint}/users`, user)
       .subscribe((res: any) => {
         localStorage.setItem('access_token', res.token)
-        this.getUserProfile(res._id).subscribe((res) => {
+        this.getUserProfile(res.id).subscribe((res) => {
           this.currentUser = res;
-          this.router.navigate(['help']);
+          console.log(this.isLoggedIn)
+          // console.log(this.getToken())
+          this.router.navigate(['allPlaylists']);
         })
       })
   }

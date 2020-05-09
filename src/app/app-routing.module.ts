@@ -7,9 +7,8 @@ import { AllPlaylistsComponent } from './playlists/all-playlists/allplaylists.co
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './playlists/search/search.component';
-import { SigninComponent } from './components/signin/signin.component';
-import { SignupComponent } from './components/signup/signup.component';
 import { CreatePlaylistComponent } from './playlists/create-playlist/createPlaylist.component';
+
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -21,8 +20,7 @@ const routes: Routes = [
   { path: 'login', pathMatch: 'full', component: LoginComponent },
   { path: 'search', pathMatch: 'full', component: SearchComponent },
   { path: 'createPlaylist', pathMatch: 'full', component: CreatePlaylistComponent },
-  { path: 'signin', pathMatch: 'full', component: SigninComponent },
-  { path: 'SignupComponent', component: SignupComponent}
+  { path: 'signin', pathMatch: 'full', component: LoginComponent }
 ];
 
 @NgModule({
