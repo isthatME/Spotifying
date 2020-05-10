@@ -61,7 +61,8 @@
           "path": "./assets/musics/Come Around Me.mp3"
         }
       ]
-    },{
+    },
+    {
       "id": 2,
       "cover": "../assets/cover/img4.png",
       "name": "Trap",
@@ -91,7 +92,8 @@
           "path": "./assets/musics/Come Around Me.mp3"
         }
       ]
-    },{
+    },
+    {
       "id": 3,
       "cover": "../assets/cover/img3.png",
       "name": "Trap",
@@ -129,6 +131,26 @@
       "email": "gui@gui.com",
       "password": "123",
       "id": 0
+    },
+    {
+      "email": "gui@gui.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "email": "gui@gui.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "email": "gui@gui.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "email": "gui@gui.com",
+      "password": "123",
+      "id": 4
     }
   ],
   "playlist": [
@@ -141,21 +163,21 @@
       "cover": "../assets/cover/img2.png",
       "name": "Rap",
       "id": 1
-    }, 
-    {
-      "cover": "../assets/cover/img3.png",
-      "name": "Rock e Pop",
-      "id": 2
-    }, {
-      "cover": "../assets/cover/img4.png",
-      "name": "Whatever",
-      "id": 3
     }
   ],
   "musics": [
     {
+      "id": 0,
+      "name": "Confirmation",
+      "userId": 0,
+      "playlistName": "Changes",
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3"
+    },
+    {
       "id": 1,
-      "name": "Come Around Me",
+      "name": "Habitual",
       "userId": 0,
       "playlistName": "Changes",
       "singer": "justin Bieber",
@@ -173,7 +195,7 @@
     },
     {
       "id": 3,
-      "name": "Habitual",
+      "name": "Forever ft. Post Malone",
       "userId": 0,
       "playlistName": "Changes",
       "singer": "justin Bieber",
@@ -224,6 +246,14 @@
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3",
       "id": 8
+    },
+    {
+      "name": "Come Around Me",
+      "userId": 0,
+      "singer": "justin Bieber",
+      "duration": "4:24",
+      "path": "./assets/musics/Come Around Me.mp3",
+      "id": 9
     }
   ],
   "login": [

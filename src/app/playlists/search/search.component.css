@@ -1,7 +1,6 @@
 input { 
     margin: 3px;
 }
-
 button {
     background-color: #1DB954;
     border: none;
@@ -19,9 +18,7 @@ button {
     display: flex;
     height: 100%;
     width: 100%;
-    justify-content: center;
-    
-
+    justify-content: center;  
 }
 #nova-playlist{
     background-color: rgb(13, 54, 28);    

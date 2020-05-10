@@ -50,6 +50,7 @@ nav{
   }
   li a:hover:not(.active) {
    color:rgb(13, 153, 13);
+   cursor: pointer;
   }
   li a.active {
   color:rgb(13, 153, 13);

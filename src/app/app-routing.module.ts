@@ -1,3 +1,4 @@
+import { AuthGuard } from './shared/auth.guard';
 import { PlaylistComponent } from './playlists/playlist/playlist.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -12,7 +13,7 @@ import { CreatePlaylistComponent } from './playlists/create-playlist/createPlayl
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'allPlaylists', pathMatch: 'full', component: AllPlaylistsComponent},
+  { path: 'allPlaylists', pathMatch: 'full', component: AllPlaylistsComponent, canActivate:[AuthGuard]},
   { path: 'playlist/:id', pathMatch: 'full', component: PlaylistComponent }, 
   { path: 'home', pathMatch: 'full', component: HomeComponent },
   { path: 'register', pathMatch: 'full', component: RegisterComponent },

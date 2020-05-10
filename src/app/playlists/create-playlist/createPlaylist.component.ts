@@ -1,5 +1,5 @@
+import { SearchService } from './../search/search.service';
 import { Component, OnInit } from "@angular/core";
-import { PlaylistService } from "../all-playlists/playlist.service";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
@@ -13,7 +13,7 @@ export class CreatePlaylistComponent implements OnInit {
   formValue: any;
 
   constructor(
-    private playlistService: PlaylistService,
+    private searchService: SearchService,
     private fb: FormBuilder,
     private router: Router
   ) { }
@@ -32,7 +32,7 @@ export class CreatePlaylistComponent implements OnInit {
   //cria a playlist
   create(form) {
     if (form.valid) {
-      this.playlistService.createPlaylist(form.value).subscribe(
+      this.searchService.createPlaylist(form.value).subscribe(
         (succes) => {
           console.log("Playlist criada com sucesso");
           this.router.navigate(["/search"]);

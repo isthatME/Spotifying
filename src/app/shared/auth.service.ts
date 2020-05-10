@@ -36,8 +36,6 @@ export class AuthService {
         localStorage.setItem('access_token', res.token)
         this.getUserProfile(res.id).subscribe((res) => {
           this.currentUser = res;
-          console.log(this.isLoggedIn)
-          // console.log(this.getToken())
           this.router.navigate(['allPlaylists']);
         })
       })
@@ -52,6 +50,12 @@ export class AuthService {
     return (authToken !== null) ? true : false;
   }
 
+  doLogout() {
+    let removeToken = localStorage.removeItem('access_token');
+    if (removeToken == null) {
+      this.router.navigate(['login']);
+    }
+  }
   // User profile
   getUserProfile(id): Observable<any> {
     let api = `${this.endpoint}/users/${id}`;

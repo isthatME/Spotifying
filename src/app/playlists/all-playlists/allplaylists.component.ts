@@ -1,4 +1,3 @@
-import { LoginService } from './../../login/login.service';
 import { PlaylistService } from './playlist.service';
 import { Playlist } from './../playlists';
 import { Component, OnInit } from '@angular/core';
@@ -19,11 +18,7 @@ export class AllPlaylistsComponent implements OnInit {
     this.pl.getPlaylist().subscribe((data: any) => {
       this.playlist$ = data
     })
-
-    // this.currentUser = this.LoginService.currentUser
-    // localStorage.setItem('username', this.currentUser.name)
-    // console.log(this.currentUser)
+    
   }
-
 
 }

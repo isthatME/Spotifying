@@ -1,6 +1,5 @@
-import { LoginService } from './../login/login.service';
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanActivate, Router } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, CanActivate, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from './../shared/auth.service';
 
@@ -18,9 +17,9 @@ export class AuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    if (this.LoginService.isLoggedIn != true) {
+    if (this.authService.isLoggedIn != true) {
       window.alert("Access not allowed!");
-      this.router.navigate(['allPlaylist'])
+      this.router.navigate(['register'])
     }
     return true;
   }

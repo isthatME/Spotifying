@@ -14,7 +14,6 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { UsernavbarComponent } from './navbar/usernavbar/usernavbar.component';
 import { SearchComponent } from './playlists/search/search.component';
-import { SignupComponent } from './components/signup/signup.component';
 import { AuthInterceptor } from './shared/authconfig.interceptor';
 import { CreatePlaylistComponent } from './playlists/create-playlist/createPlaylist.component';
 import { FilterPipe } from './playlists/search/filter.pipe';
@@ -33,7 +32,6 @@ import { FilterPipe } from './playlists/search/filter.pipe';
     AllPlaylistsComponent,
     UsernavbarComponent,
     SearchComponent,
-    SignupComponent,
     CreatePlaylistComponent,
     FilterPipe,
   ],
