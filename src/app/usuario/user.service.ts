@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  readonly API = 'http://localhost:3000/users/'
+  readonly API = 'http://localhost:3000/register/'
 
   constructor(private http: HttpClient) { 
 

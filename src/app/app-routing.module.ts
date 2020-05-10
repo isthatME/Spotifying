@@ -14,12 +14,12 @@ import { CreatePlaylistComponent } from './playlists/create-playlist/createPlayl
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'allPlaylists', pathMatch: 'full', component: AllPlaylistsComponent, canActivate:[AuthGuard]},
-  { path: 'playlist/:id', pathMatch: 'full', component: PlaylistComponent }, 
+  { path: 'playlist/:id', pathMatch: 'full', component: PlaylistComponent, canActivate:[AuthGuard]}, 
   { path: 'home', pathMatch: 'full', component: HomeComponent },
   { path: 'register', pathMatch: 'full', component: RegisterComponent },
   { path: 'faq', pathMatch: 'full', component: FaqComponent },
   { path: 'login', pathMatch: 'full', component: LoginComponent },
-  { path: 'search', pathMatch: 'full', component: SearchComponent },
+  { path: 'search', pathMatch: 'full', component: SearchComponent, canActivate:[AuthGuard]},
   { path: 'createPlaylist', pathMatch: 'full', component: CreatePlaylistComponent },
   { path: 'signin', pathMatch: 'full', component: LoginComponent }
 ];

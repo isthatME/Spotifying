@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   endpoint: string = 'http://localhost:3000';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  currentUser = {};
+  currentUser: {}
 
   constructor(
     private http: HttpClient,
@@ -20,25 +20,32 @@ export class AuthService {
   ) {
   }
 
-  // Sign-up
-  signUp(user: User): Observable<any> {
-    let api = `${this.endpoint}/login`;
-    return this.http.post(api, user)
-      .pipe(
-        catchError(this.handleError)
-      )
-  }
-
   // Sign-in
   signIn(user: User) {
     return this.http.post<any>(`${this.endpoint}/users`, user)
       .subscribe((res: any) => {
-        localStorage.setItem('access_token', res.token)
-        this.getUserProfile(res.id).subscribe((res) => {
-          this.currentUser = res;
-          this.router.navigate(['allPlaylists']);
+        this.http.get(`${this.endpoint}/register`).subscribe((data: any) => {
+          const { email, password } = res
+          const user = data.find(e => e.email == email && e.password == password)
+          if (!user) return console.log('nao encontramos registros')
+          console.log('usuário logado com sucesso')
+          const storeToken = {
+            id: res.id,
+            email: res.email,
+            password: res.password,
+            token: "token-criado-manualmente"
+          }
+          this.currentUser = storeToken;
+          localStorage.setItem('access_token', storeToken.token)
+          this.router.navigate(['allPlaylist'])
+
         })
+
       })
+
+
+
+
   }
 
   getToken() {
@@ -56,7 +63,7 @@ export class AuthService {
       this.router.navigate(['login']);
     }
   }
-  // User profile
+
   getUserProfile(id): Observable<any> {
     let api = `${this.endpoint}/users/${id}`;
     return this.http.get(api, { headers: this.headers }).pipe(

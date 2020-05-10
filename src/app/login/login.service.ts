@@ -1,3 +1,5 @@
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/shared/auth.service';
 import { User } from '../usuario/user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -10,13 +12,21 @@ export class LoginService {
   readonly API = 'http://localhost:3000/login/'
 
   currentUser = {}
+  form: FormGroup;
 
-  constructor(private http: HttpClient) { 
+  constructor(
+    private authService: AuthService,
+    private fb: FormBuilder
 
+    ) { 
+      this.form = this.fb.group({
+        email: ['', Validators.required],
+        password: ['', Validators.required]
+      })
    }
 
-   login(user: User){
-     return this.http.post<User>(this.API, user)
+   login(){
+     return this.authService.signIn(this.form.value)
    }
 
 }

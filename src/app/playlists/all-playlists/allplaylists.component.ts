@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/shared/auth.service';
 import { PlaylistService } from './playlist.service';
 import { Playlist } from './../playlists';
 import { Component, OnInit } from '@angular/core';
@@ -9,16 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllPlaylistsComponent implements OnInit {
   playlist$: Playlist[];
-
+  currentUser: any;
   constructor(
-    private pl: PlaylistService
+    private pl: PlaylistService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
     this.pl.getPlaylist().subscribe((data: any) => {
       this.playlist$ = data
+      
     })
-    
+    this.currentUser = this.authService.currentUser
   }
 
 }

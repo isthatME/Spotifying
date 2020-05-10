@@ -149,8 +149,13 @@
     },
     {
       "email": "gui@gui.com",
-      "password": "123",
+      "password": "1233",
       "id": 4
+    },
+    {
+      "email": "gui@gui.com",
+      "password": "123",
+      "id": 5
     }
   ],
   "playlist": [
@@ -256,10 +261,10 @@
       "id": 9
     }
   ],
-  "login": [
+  "register": [
     {
-      "name": "Guilherme",
-      "email": "123",
+      "name": "123",
+      "email": "gui@gui.com",
       "password": "123",
       "id": 1
     }
