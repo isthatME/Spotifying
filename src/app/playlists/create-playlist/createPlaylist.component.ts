@@ -23,8 +23,7 @@ export class CreatePlaylistComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       cover: "../assets/cover/img1.jpg",
-      name: ["", Validators.required],
-      id: 2,
+      name: ["", Validators.required]
     });
     this.formValue = this.form.value;
   }
