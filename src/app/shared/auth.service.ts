@@ -37,7 +37,7 @@ export class AuthService {
           }
           this.currentUser = storeToken;
           localStorage.setItem('access_token', storeToken.token)
-          this.router.navigate(['allPlaylist'])
+          this.router.navigate(['allPlaylists'])
 
         })
 
