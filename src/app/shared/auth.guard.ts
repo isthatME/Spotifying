@@ -17,7 +17,6 @@ export class AuthGuard implements CanActivate {
   canActivate( 
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-      console.log(next)
     if (this.authService.isLoggedIn != true) {
       window.alert("Você não está logado, ou não tem uma conta válida");
       this.router.navigate(['login'])

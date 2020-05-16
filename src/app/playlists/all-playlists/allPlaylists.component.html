@@ -10,12 +10,13 @@
     </div>
     <div class="text-container">
         <p class="larger-text">
-           Seja bem vindo {{ currentUser.name}} Ouça sua playlist aqui
+           Seja bem vindo {{ currentUser }} Ouça sua playlist aqui
         </p>
         <p class="smaller-text">
             Essas são suas ultimas reproduções.
         </p>
     </div>
-    <button class="playerManager"><a routerLink="/search">GERENCIAR PLAYLIST</a></button>
+    <button routerLink="/search" class="playerManager">GERENCIAR PLAYLIST</button>
+    <button routerLink="/userEdit" class="playerManager">EDITE SEU PERFIL</button>
 </div>
 <app-footer></app-footer>

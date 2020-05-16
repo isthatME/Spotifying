@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllPlaylistsComponent implements OnInit {
   playlist$: Playlist[];
-  currentUser: any;
+  currentUser: any
   constructor(
     private pl: PlaylistService,
     private authService: AuthService
@@ -18,10 +18,9 @@ export class AllPlaylistsComponent implements OnInit {
 
   ngOnInit(): void {
     this.pl.getPlaylist().subscribe((data: any) => {
-      this.playlist$ = data
-      
+      this.playlist$ = data      
     })
-    this.currentUser = this.authService.currentUser
+    this.currentUser = localStorage.getItem('name')
   }
 
 }

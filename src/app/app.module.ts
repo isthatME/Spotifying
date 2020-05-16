@@ -17,6 +17,7 @@ import { SearchComponent } from './playlists/search/search.component';
 import { AuthInterceptor } from './shared/authconfig.interceptor';
 import { CreatePlaylistComponent } from './playlists/create-playlist/createPlaylist.component';
 import { FilterPipe } from './playlists/search/filter.pipe';
+import { UserEditComponent } from './playlists/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FilterPipe } from './playlists/search/filter.pipe';
     SearchComponent,
     CreatePlaylistComponent,
     FilterPipe,
+    UserEditComponent,
   ],
   imports: [
     BrowserModule,

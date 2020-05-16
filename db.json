@@ -127,12 +127,6 @@
   ],
   "users": [
     {
-      "name": "gui@gui.com",
-      "email": "gui@gui.com",
-      "password": "123",
-      "id": 0
-    },
-    {
       "email": "gui@gui.com",
       "password": "123",
       "id": 1
@@ -141,21 +135,6 @@
       "email": "gui@gui.com",
       "password": "123",
       "id": 2
-    },
-    {
-      "email": "gui@gui.com",
-      "password": "123",
-      "id": 3
-    },
-    {
-      "email": "gui@gui.com",
-      "password": "1233",
-      "id": 4
-    },
-    {
-      "email": "gui@gui.com",
-      "password": "123",
-      "id": 5
     }
   ],
   "playlist": [
@@ -168,6 +147,11 @@
       "cover": "../assets/cover/img2.png",
       "name": "Rap",
       "id": 1
+    },
+    {
+      "cover": "../assets/cover/img1.jpg",
+      "name": "teste",
+      "id": 2
     }
   ],
   "musics": [
@@ -242,28 +226,11 @@
       "singer": "Eminem",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
-    },
-    {
-      "name": "Come Around Me",
-      "userId": 0,
-      "playlistName": "Whatever",
-      "singer": "justin Bieber",
-      "duration": "4:24",
-      "path": "./assets/musics/Come Around Me.mp3",
-      "id": 8
-    },
-    {
-      "name": "Come Around Me",
-      "userId": 0,
-      "singer": "justin Bieber",
-      "duration": "4:24",
-      "path": "./assets/musics/Come Around Me.mp3",
-      "id": 9
     }
   ],
   "register": [
     {
-      "name": "123",
+      "name": "Guilherme",
       "email": "gui@gui.com",
       "password": "123",
       "id": 1

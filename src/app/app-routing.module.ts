@@ -1,3 +1,4 @@
+import { UserEditComponent } from './playlists/user-edit/user-edit.component';
 import { AuthGuard } from './shared/auth.guard';
 import { PlaylistComponent } from './playlists/playlist/playlist.component';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'home', pathMatch: 'full', component: HomeComponent },
   { path: 'register', pathMatch: 'full', component: RegisterComponent },
   { path: 'faq', pathMatch: 'full', component: FaqComponent },
+  { path: 'userEdit', pathMatch: 'full', component: UserEditComponent, canActivate:[AuthGuard]},
   { path: 'login', pathMatch: 'full', component: LoginComponent },
   { path: 'search', pathMatch: 'full', component: SearchComponent, canActivate:[AuthGuard]},
   { path: 'createPlaylist', pathMatch: 'full', component: CreatePlaylistComponent },

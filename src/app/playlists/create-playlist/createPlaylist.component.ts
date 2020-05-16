@@ -25,7 +25,6 @@ export class CreatePlaylistComponent implements OnInit {
       cover: "../assets/cover/img1.jpg",
       name: ["", Validators.required]
     });
-    this.formValue = this.form.value;
   }
 
   //cria a playlist

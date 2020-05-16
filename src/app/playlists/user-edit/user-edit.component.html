@@ -1,0 +1,9 @@
+<div class="input-box">
+    <h1>Edite seu nome de usuário</h1>
+    <form [formGroup]="form">
+      <input type="text" placeholder="Insira seu novo nome de usuário" style="width: 250px" formControlName="name">
+    </form>
+    <div class="btn-create">
+      <div class="create-btn"><button class="" type="button" (click)="create(form)">mudar</button></div>
+    </div>
+  </div>
