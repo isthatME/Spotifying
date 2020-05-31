@@ -79,12 +79,17 @@ export class SearchComponent implements OnInit {
   //deleta a musica de uma playlist pré=selecionada, baseada no id ( que é pego na iteração do ngFor
   //no html deste componente)
   onDelete(song) {
-    this.searchService.delete(song.id).subscribe(
+    console.log(song)
+    this.searchService.delete(song._id).subscribe(
       (success) => {
         console.log("sucesso ao remover música");
         this.getPlaylistSelected();
       },
-      (error) => console.log("erro ao remover música")
+      (error) => {
+        console.log("erro ao remover música");
+        this.getPlaylistSelected();
+      }
+      
     );
   }
 

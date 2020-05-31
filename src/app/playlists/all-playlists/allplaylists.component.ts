@@ -11,10 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class AllPlaylistsComponent implements OnInit {
   playlist$: Playlist[];
   currentUser: any
-  constructor(
-    private pl: PlaylistService,
-    private authService: AuthService
-  ) { }
+  constructor(private pl: PlaylistService) { }
 
   ngOnInit(): void {
     this.pl.getPlaylist().subscribe((data: any) => {

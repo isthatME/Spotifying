@@ -90,6 +90,7 @@ button{
     background-color: #1DB954;
     border-radius: 500px;
     width: 200px;
+    border:none;
 }
 .button-sub{
     display: flex;

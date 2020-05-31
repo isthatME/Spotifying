@@ -7,13 +7,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  readonly API = 'http://localhost:3000/register/'
+  readonly API = 'http://localhost:3000'
 
   constructor(private http: HttpClient) { 
 
    }
 
-   createUser(user: User){
-     return this.http.post<User>(this.API, user)
+   createUser(user: Object){
+     return this.http.post(`${this.API}/register`, user)
    }
 }

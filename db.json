@@ -130,38 +130,28 @@
       "email": "gui@gui.com",
       "password": "123",
       "id": 1
-    },
-    {
-      "email": "gui@gui.com",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "email": "gui@gui.com",
-      "password": "123",
-      "id": 3
     }
   ],
   "playlist": [
     {
       "cover": "../assets/cover/img1.jpg",
-      "name": "Changes",
-      "id": 0
+      "name": "Changes"
+     
     },
     {
       "cover": "../assets/cover/img2.png",
-      "name": "Rap",
-      "id": 1
+      "name": "Rap"
+      
     },
     {
       "cover": "../assets/cover/img1.jpg",
-      "name": "teste",
-      "id": 2
+      "name": "teste"
+      
     }
   ],
   "musics": [
     {
-      "id": 0,
+    
       "name": "Confirmation",
       "playlistName": "Changes",
       "singer": "justin Bieber",
@@ -169,7 +159,6 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "id": 1,
       "name": "Habitual",
       "playlistName": "Changes",
       "singer": "justin Bieber",
@@ -177,7 +166,6 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "id": 2,
       "name": "Confirmation",
       "playlistName": "Changes",
       "singer": "justin Bieber",
@@ -185,7 +173,6 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "id": 3,
       "name": "Forever ft. Post Malone",
       "playlistName": "Changes",
       "singer": "justin Bieber",
@@ -193,10 +180,9 @@
       "path": "./assets/musics/Come Around Me.mp3"
     },
     {
-      "id": 7,
-      "name": " In Too Deep",
+      "name": "Whatever",
       "playlistName": "Rap",
-      "singer": "Eminem",
+      "singer": "Bléster",
       "duration": "4:24",
       "path": "./assets/musics/Come Around Me.mp3"
     }

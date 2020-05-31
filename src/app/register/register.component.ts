@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
           email: form.value.email,
           password: form.value.password,
         })
-        .subscribe((data) => console.log("success", data));
+        .subscribe((data:any) => console.log("success", data));
       this.formulario.reset();
     }
   }

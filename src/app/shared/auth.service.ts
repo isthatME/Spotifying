@@ -30,13 +30,14 @@ export class AuthService {
           if (!user) return console.log('nao encontramos registros')
           console.log('usuário logado com sucesso')
           const storeToken = {
-            id: res.id,
+            id: res._id,
             email: res.email,
             password: res.password,
             token: "token-criado-manualmente"
           }
           this.currentUser = storeToken;
           localStorage.setItem('access_token', storeToken.token)
+          localStorage.setItem('userId', user._id)
           localStorage.setItem('name', data[0].name)
           this.router.navigate(['allPlaylists'])
 
@@ -59,16 +60,6 @@ export class AuthService {
     if (removeToken == null) {
       this.router.navigate(['login']);
     }
-  }
-
-  getUserProfile(id): Observable<any> {
-    let api = `${this.endpoint}/users/${id}`;
-    return this.http.get(api, { headers: this.headers }).pipe(
-      map((res: Response) => {
-        return res || {}
-      }),
-      catchError(this.handleError)
-    )
   }
 
   // Error 

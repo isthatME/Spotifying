@@ -21,24 +21,27 @@
     "@angular/router": "~9.0.7",
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@types/jquery": "^3.3.34",
+    "body-parser": "^1.19.0",
     "core-js": "^3.0.1",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "ngx-bootstrap": "^2.0.5",
+    "mongoose": "^5.9.15",
+    "ngx-bootstrap": "^5.6.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.7",
+    "@angular-devkit/build-angular": "^0.901.7",
     "@angular/cli": "~9.0.7",
     "@angular/compiler-cli": "~9.0.7",
     "@angular/language-service": "~9.0.7",
-    "ts-node": "~8.3.0",
-    "tslint": "~5.18.0",
     "@types/node": "^11.13.5",
     "angular2-template-loader": "^0.6.2",
     "raw-loader": "^1.0.0",
     "ts-loader": "^5.3.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.18.0",
     "typescript": "^3.4.4"
   }
 }

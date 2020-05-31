@@ -10,13 +10,13 @@ export class PlaylistService {
   searchPlaylist(event: any) {
     throw new Error("Method not implemented.");
   }
-  readonly playlistUrl = 'http://localhost:3000/playlists/'
+  readonly playlistUrl = 'http://localhost:3000'
   constructor(private http: HttpClient) {
 
   }
 
   getPlaylistById(id: string): Observable<Playlist> {
-    return this.http.get<Playlist>(this.playlistUrl + id)
+    return this.http.get<Playlist>(`${this.playlistUrl}/playlists/` + id)
     
   }
 

@@ -7,13 +7,13 @@ import { HttpClient } from '@angular/common/http'
 })
 export class PlaylistService {
 
-  private readonly API = 'http://localhost:3000/' 
+  private readonly API = 'http://localhost:3000' 
 
 
   constructor(private http: HttpClient) { }
   
   getPlaylist(){
-    return this.http.get<Playlist[]>(`${this.API}playlists`)
+    return this.http.get<Playlist[]>(`${this.API}/playlist`)
   }
 
 }

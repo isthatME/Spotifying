@@ -1,4 +1,4 @@
- GET   http://localhost:3000/musics?name=In
+GET http://localhost:3000/musics?name=In
 
 
 

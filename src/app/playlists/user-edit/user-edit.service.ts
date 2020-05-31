@@ -9,7 +9,7 @@ export class UserEditService {
   constructor(private http: HttpClient) { }
 
 
-  editUser(usuario: any){
-    return this.http.put(`http://localhost:3000/register/1`,usuario)
+  editUser(usuario: any, id: string){
+    return this.http.patch(`http://localhost:3000/register/${id}`,usuario)
   } 
 }
