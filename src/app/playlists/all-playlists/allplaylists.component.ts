@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class AllPlaylistsComponent implements OnInit {
   playlist$: Playlist[];
   currentUser: any
+  currentPlaylist: any
   constructor(private pl: PlaylistService) { }
 
   ngOnInit(): void {
@@ -18,6 +19,9 @@ export class AllPlaylistsComponent implements OnInit {
       this.playlist$ = data      
     })
     this.currentUser = localStorage.getItem('name')
+  }
+  getPlaylist(play){
+    this.currentPlaylist = localStorage.setItem('currentPlaylist', play.name)
   }
 
 }

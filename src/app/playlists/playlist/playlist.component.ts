@@ -1,4 +1,4 @@
-import { Playlist } from './../playlists';
+import { map } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { PlaylistService } from './playlist.service';
 import { ActivatedRoute } from '@angular/router';
@@ -11,44 +11,55 @@ declare var $: any
   styleUrls: ['./playlist.component.css']
 })
 
-export class PlaylistComponent implements OnInit {  
-  playlist: Playlist
+export class PlaylistComponent implements OnInit {
+  playlist: any
+  name:any
   songs: any
   path: any;
+  cover: any
   playlistIndex: any;
+  currentPlaylist: any
 
-  constructor(private pl: PlaylistService,private router: ActivatedRoute) { }
+  constructor(
+    private PlaylistService: PlaylistService,
+    private router: ActivatedRoute
+  ) { }
   ngOnInit() {
     let id = this.router.snapshot.paramMap.get('id')
+    this.currentPlaylist = localStorage.getItem('currentPlaylist')
     this.playlistIndex = id
-    this.pl.getPlaylistById(id).subscribe((data:Playlist) => {
-      this.playlist = data
-      this.songs = this.playlist.music
-      this.path = this.playlist.music.map(e => e.path)   
+    this.PlaylistService.getAllPlaylists().subscribe((data: any) => {
+      this.playlist = data.filter(e => e.name == this.currentPlaylist)
+      this.cover = this.playlist.cover
+      this.name = this.playlist.name
+      console.log(this.playlist)
+    })
+    this.PlaylistService.getAllSongs().subscribe((musics: any) => {
+      this.songs = musics.filter(e => e.playlistName == this.currentPlaylist)
+      this.path = this.songs.map(e => e.path)
     })
   }
-  
+
   song = new Audio()
   currentSong = 0;
 
   playSong(index: any) {
-    document.getElementById(this.playlist.music[this.currentSong].name).style.color = "white";
+    document.getElementById(this.songs[this.currentSong].name).style.color = "white";
     this.currentSong = index;
     this.song.src = this.path[this.currentSong]
-    console.log(this.path[0])
     $('.play i').removeClass('fas fa-play').addClass('fas fa-pause')
     this.playAndPause()
     document.getElementById(this.songs[this.currentSong].name).style.color = "#1DB954";
-      
+
   }
   playAndPause() {
     if (this.song.paused) {
       $('.play i').removeClass('fas fa-play').addClass('fas fa-pause')
       $('.play-pause-larger i').removeClass('fas fa-play-circle').addClass('fas fa-pause')
-      this.song.play(); 
-    
+      this.song.play();
+
     } else {
-      $('.play i').removeClass('fas fa-pause').addClass('fas fa-play') 
+      $('.play i').removeClass('fas fa-pause').addClass('fas fa-play')
       $('.play-pause-larger i').removeClass('fas fa-pause').addClass('fas fa-play-circle')
       this.song.pause()
     }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { PlaylistService } from "../all-playlists/playlist.service";
 import { SearchService } from './search.service';
 
 @Component({
