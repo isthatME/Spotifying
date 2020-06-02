@@ -20,7 +20,7 @@ export class SearchService {
 
   constructor(private http: HttpClient) { }
   getAllSongsFromAPlaylist(playlistName: any) {
-    return this.http.get<any>(`${this.API}/musics/${playlistName}`).pipe(
+    return this.http.get<any>(`${this.API}/musicss?playlistName=${playlistName}`).pipe(
       tap(e => console.log(e))
     )
   }
