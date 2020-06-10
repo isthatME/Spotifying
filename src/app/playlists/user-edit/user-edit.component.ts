@@ -48,5 +48,8 @@ export class UserEditComponent implements OnInit {
       )
     }
   }
+  cancel() {
+    this.router.navigate(['/allPlaylists'])
+  }
 
 }

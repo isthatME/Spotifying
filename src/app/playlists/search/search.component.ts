@@ -75,7 +75,7 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  //deleta a musica de uma playlist pré=selecionada, baseada no id ( que é pego na iteração do ngFor
+  //deleta a musica de uma playlist pré=selecionada, baseada no id ( que é pego na interação do ngFor
   //no html deste componente)
   onDelete(song) {
     console.log(song)
@@ -97,14 +97,15 @@ export class SearchComponent implements OnInit {
   }
 
   addSong(song) {
-    song.playlistName = this.currentPlaylist;
-    song.id = this.nextIndex;
-    this.searchService.addSong(song).subscribe(
-      (success) => {
-        console.log("sucesso ao adicionar música");
-        this.getNextIndex();
-      },
-      (error) => console.log("erro ao adicionar música")
-    );
+    // song.playlistName = this.currentPlaylist;
+    // song.id = this.nextIndex;
+    // this.searchService.addSong(song).subscribe(
+    //   (success) => {
+    //     console.log("sucesso ao adicionar música");
+    //     this.getNextIndex();
+    //   },
+    //   (error) => console.log("erro ao adicionar música")
+    // );
+    console.log(song)
   }
 }
