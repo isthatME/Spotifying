@@ -28,8 +28,6 @@ export class PlaylistComponent implements OnInit {
     this.playlistIndex = id
     this.PlaylistService.getAllPlaylists().subscribe((data: any) => {
       this.playlist = data.filter(e => e.name == this.currentPlaylist)
-      // this.cover = this.playlist[0].cover
-      // this.name = this.playlist[0].name
     })
     this.PlaylistService.getAllSongs().subscribe((musics: any) => {
       this.songs = musics.filter(e => e.playlistName == this.currentPlaylist)

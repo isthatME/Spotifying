@@ -15,8 +15,7 @@ export class PlaylistService {
   }
 
   getAllPlaylists(): Observable<Playlist> {
-    return this.http.get<Playlist>(`${this.URL}/playlist`)
-    
+    return this.http.get<Playlist>(`${this.URL}/playlist`)    
   }
   getAllSongs(): Observable<Music> {
     return this.http.get<Music>(`${this.URL}/musics`)

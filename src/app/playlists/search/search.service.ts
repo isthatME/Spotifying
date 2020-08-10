@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -20,9 +19,7 @@ export class SearchService {
 
   constructor(private http: HttpClient) { }
   getAllSongsFromAPlaylist(playlistName: any) {
-    return this.http.get<any>(`${this.API}/musicss?playlistName=${playlistName}`).pipe(
-      tap(e => console.log(e))
-    )
+    return this.http.get<any>(`${this.API}/musicss?playlistName=${playlistName}`)
   }
 
   getPlaylistReference() {
